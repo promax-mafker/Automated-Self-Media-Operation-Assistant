@@ -16,6 +16,7 @@ from workbench.ids import new_run_id
 from workbench.pipeline.runner import run_pipeline
 from workbench.store import repo
 from workbench.store.db import init_db
+from workbench.topics import TopicError
 from workbench.topics.benchmark import (
     CONTENT_TYPE_LABELS,
     WINDOW_DAYS,
@@ -23,7 +24,7 @@ from workbench.topics.benchmark import (
     build_profile,
     seed_benchmark,
 )
-from workbench.topics.sources import default_benchmark_dir
+from workbench.topics.sources import SOURCE_NAMES, default_benchmark_dir
 
 app = typer.Typer(
     help="选题与爆款对标：热榜/RSS/本地 fixture → 10 条带证据的选题卡",
@@ -36,6 +37,10 @@ def _fail(exc: WorkbenchError) -> NoReturn:
     raise typer.Exit(code=exc.exit_code) from None
 
 
+def _fmt(value: float | None) -> str:
+    return "-" if value is None else f"{value:g}"
+
+
 def _profile_lines(profile: BenchmarkProfile) -> list[str]:
     duration = profile.duration
     title_length = profile.title_length
@@ -44,16 +49,31 @@ def _profile_lines(profile: BenchmarkProfile) -> list[str]:
         (
             f"样本：{profile.post_count} 篇（近 {profile.window_days} 天）  "
             f"爆款：{profile.hit_count} 条（burst>={profile.burst_threshold:g}，Top 10%）  "
-            f"P50 views：{profile.p50_views if profile.p50_views is not None else '-'}"
+            f"P50 views：{_fmt(profile.p50_views)}"
         ),
         (
-            f"时长（秒）：n={duration.n} 中位 {duration.median} "
-            f"P25–P75 {duration.p25}–{duration.p75} 全距 {duration.minimum}–{duration.maximum}"
+            "时长（秒）："
+            + (
+                "n=0（该画像没有视频时长样本）"
+                if duration.n == 0
+                else (
+                    f"n={duration.n} 中位 {_fmt(duration.median)} "
+                    f"P25–P75 {_fmt(duration.p25)}–{_fmt(duration.p75)} "
+                    f"全距 {_fmt(duration.minimum)}–{_fmt(duration.maximum)}"
+                )
+            )
         ),
         (
-            f"标题长度（字）：n={title_length.n} 中位 {title_length.median} "
-            f"P25–P75 {title_length.p25}–{title_length.p75} "
-            f"全距 {title_length.minimum}–{title_length.maximum}"
+            "标题长度（字）："
+            + (
+                "n=0（该画像没有标题样本）"
+                if title_length.n == 0
+                else (
+                    f"n={title_length.n} 中位 {_fmt(title_length.median)} "
+                    f"P25–P75 {_fmt(title_length.p25)}–{_fmt(title_length.p75)} "
+                    f"全距 {_fmt(title_length.minimum)}–{_fmt(title_length.maximum)}"
+                )
+            )
         ),
     ]
     if profile.keywords:
@@ -120,6 +140,16 @@ def suggest(
 ) -> None:
     """从三个信源生成选题卡：`<out>/topics.json`。"""
     try:
+        selected = [part.strip() for part in sources.split(",") if part.strip()]
+        unknown = [name for name in selected if name not in SOURCE_NAMES]
+        if unknown:
+            raise TopicError(
+                f"未知信源：{', '.join(unknown)}；可选：{' / '.join(SOURCE_NAMES)}"
+            )
+        if offline.strip().lower() not in {
+            "1", "0", "true", "false", "yes", "no", "on", "off", "y", "n",
+        }:
+            raise TopicError(f"--offline 只接受 1/0、true/false，收到 {offline!r}")
         cfg = Config.from_env()
         target = Path(out).expanduser() if out is not None else cfg.runs_dir / new_run_id()
         params: dict[str, str] = {

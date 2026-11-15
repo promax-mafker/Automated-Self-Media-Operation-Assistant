@@ -297,6 +297,9 @@ wb topic suggest --sources hotlist --hotlist /tmp/empty.json --offline 1 --out /
 - `count` 不在 1–50、`days <= 0`、`--offline` 非布尔值 → `TopicError`，退出码 2。
 - `--sources` 有未知名字 → 列出可用值，退出码 2。
 
+以上退出码指 `wb topic ...` 子命令；`wb run topic` 走 runner，stage 异常按 ADR §6.1
+统一包成 `PipelineFailed`（退出码 1），job 行会记录原始错误。
+
 ## 6. 数据契约与文件
 
 | 路径 | 说明 |
