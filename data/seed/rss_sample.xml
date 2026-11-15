@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>职场成长周刊（虚构 fixture）</title>
+    <link>https://example.invalid/rss/weekly</link>
+    <description>T05 离线 RSS 样例，全部内容为虚构，不是真实媒体。</description>
+    <language>zh-CN</language>
+    <item>
+      <title>用输出倒逼输入的一周实验</title>
+      <link>https://example.invalid/rss/weekly/001</link>
+      <guid isPermaLink="false">rss_weekly_001</guid>
+      <pubDate>Sun, 08 Nov 2026 10:00:00 +0800</pubDate>
+      <description><![CDATA[<p>本周把每天学到的一点内容写成 300 字，结果读得更认真了。</p>]]></description>
+      <category>输出</category>
+      <category>学习</category>
+    </item>
+    <item>
+      <title>把年度目标拆成 12 个小项目</title>
+      <link>https://example.invalid/rss/weekly/002</link>
+      <guid isPermaLink="false">rss_weekly_002</guid>
+      <pubDate>Mon, 09 Nov 2026 11:00:00 +0800</pubDate>
+      <description><![CDATA[<p>年度目标太大，按月拆成可以验收的小项目。</p>]]></description>
+      <category>目标</category>
+      <category>计划</category>
+    </item>
+    <item>
+      <title>为什么周报要写给未来的自己</title>
+      <link>https://example.invalid/rss/weekly/003</link>
+      <guid isPermaLink="false">rss_weekly_003</guid>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0800</pubDate>
+      <description><![CDATA[<p>周报首先是给自己的记录，其次才是给领导的汇报。</p>]]></description>
+      <category>周报</category>
+      <category>复盘</category>
+    </item>
+    <item>
+      <title>三个让会议更短的规则</title>
+      <link>https://example.invalid/rss/weekly/004</link>
+      <guid isPermaLink="false">rss_weekly_004</guid>
+      <pubDate>Tue, 10 Nov 2026 10:00:00 +0800</pubDate>
+      <description><![CDATA[<p>会前给议题，会中只做决定，会后当天发纪要。</p>]]></description>
+      <category>会议</category>
+      <category>效率</category>
+    </item>
+    <item>
+      <title>副业第一年踩过的五个坑</title>
+      <link>https://example.invalid/rss/weekly/005</link>
+      <guid isPermaLink="false">rss_weekly_005</guid>
+      <pubDate>Tue, 10 Nov 2026 11:00:00 +0800</pubDate>
+      <description><![CDATA[<p>报价、范围、付款、交付、复盘，每个坑都对应一个动作。</p>]]></description>
+      <category>副业</category>
+      <category>避坑</category>
+    </item>
+    <item>
+      <title>从收藏到行动只差一个清单</title>
+      <link>https://example.invalid/rss/weekly/006</link>
+      <guid isPermaLink="false">rss_weekly_006</guid>
+      <pubDate>Wed, 11 Nov 2026 09:00:00 +0800</pubDate>
+      <description><![CDATA[<p>把收藏内容改写成下一步动作，才算真正学会。</p>]]></description>
+      <category>行动</category>
+      <category>效率</category>
+    </item>
+    <item>
+      <title>通勤路上适合做的三件事</title>
+      <link>https://example.invalid/rss/weekly/007</link>
+      <guid isPermaLink="false">rss_weekly_007</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 +0800</pubDate>
+      <description><![CDATA[<p>听播客、记灵感、排当天任务，别在车上刷短视频。</p>]]></description>
+      <category>通勤</category>
+      <category>时间管理</category>
+    </item>
+    <item>
+      <title>复盘模板迭代了七版之后</title>
+      <link>https://example.invalid/rss/weekly/008</link>
+      <guid isPermaLink="false">rss_weekly_008</guid>
+      <pubDate>Thu, 12 Nov 2026 11:00:00 +0800</pubDate>
+      <description><![CDATA[<p>最后只留下三栏：事实、判断、下一步。</p>]]></description>
+      <category>复盘</category>
+      <category>模板</category>
+    </item>
+    <item>
+      <title>账号定位的三个自检问题</title>
+      <link>https://example.invalid/rss/weekly/009</link>
+      <guid isPermaLink="false">rss_weekly_009</guid>
+      <pubDate>Thu, 12 Nov 2026 09:00:00 +0800</pubDate>
+      <description><![CDATA[<p>你是谁、帮谁、凭什么信你，三句话答不上来就先别更新。</p>]]></description>
+      <category>定位</category>
+      <category>账号</category>
+    </item>
+    <item>
+      <title>内容更新频率怎么定</title>
+      <link>https://example.invalid/rss/weekly/010</link>
+      <guid isPermaLink="false">rss_weekly_010</guid>
+      <pubDate>Fri, 13 Nov 2026 10:00:00 +0800</pubDate>
+      <description><![CDATA[<p>先按能稳定输出的下限定频率，再谈涨粉。</p>]]></description>
+      <category>更新</category>
+      <category>节奏</category>
+    </item>
+    <item>
+      <title>标题党之外，还有哪些开头</title>
+      <link>https://example.invalid/rss/weekly/011</link>
+      <guid isPermaLink="false">rss_weekly_011</guid>
+      <pubDate>Fri, 13 Nov 2026 11:00:00 +0800</pubDate>
+      <description><![CDATA[<p>用具体场景、反常识结论或一个数字开场。</p>]]></description>
+      <category>标题</category>
+      <category>开头</category>
+    </item>
+    <item>
+      <title>把一次爆款拆成可复用流程</title>
+      <link>https://example.invalid/rss/weekly/012</link>
+      <guid isPermaLink="false">rss_weekly_012</guid>
+      <pubDate>Sat, 14 Nov 2026 09:00:00 +0800</pubDate>
+      <description><![CDATA[<p>拆开头、结构、证据和结尾动作，再写成模板。</p>]]></description>
+      <category>爆款</category>
+      <category>拆解</category>
+    </item>
+  </channel>
+</rss>

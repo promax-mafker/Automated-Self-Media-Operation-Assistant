@@ -1,0 +1,189 @@
+{
+  "code": 200,
+  "name": "小红书",
+  "title": "小红书热榜（虚构 fixture）",
+  "type": "xhs",
+  "total": 18,
+  "updateTime": "2026-11-15T10:00:00+08:00",
+  "from": "fixture",
+  "data": [
+    {
+      "id": "xhs_hot_001",
+      "title": "周报写得好的人，都先做这一步",
+      "desc": "把周报从流水账改成三行结论，领导一眼看懂。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794701160000,
+      "hot": 51800,
+      "url": "https://example.invalid/hot/xhs/001",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/001"
+    },
+    {
+      "id": "xhs_hot_002",
+      "title": "为什么你的复盘没人看",
+      "desc": "复盘不是写日记，先给结论再给证据。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794701520000,
+      "hot": 48600,
+      "url": "https://example.invalid/hot/xhs/002",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/002"
+    },
+    {
+      "id": "xhs_hot_003",
+      "title": "副业接单前必须问的 4 个问题",
+      "desc": "范围、交付、修改次数、付款节点，问清再报价。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794701880000,
+      "hot": 45200,
+      "url": "https://example.invalid/hot/xhs/003",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/003"
+    },
+    {
+      "id": "xhs_hot_004",
+      "title": "早八通勤也能完成的 3 件小事",
+      "desc": "把通勤变成一天里最稳的输入时间。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794702240000,
+      "hot": 42100,
+      "url": "https://example.invalid/hot/xhs/004",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/004"
+    },
+    {
+      "id": "xhs_hot_005",
+      "title": "选题枯竭时，我会翻这三类内容",
+      "desc": "从评论区、对标爆款和历史高播放里找线索。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794702600000,
+      "hot": 39800,
+      "url": "https://example.invalid/hot/xhs/005",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/005"
+    },
+    {
+      "id": "xhs_hot_006",
+      "title": "标题改一个字，点击率翻倍",
+      "desc": "把抽象词换成具体场景，标题立刻有画面。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794702960000,
+      "hot": 37600,
+      "url": "https://example.invalid/hot/xhs/006",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/006"
+    },
+    {
+      "id": "xhs_hot_007",
+      "title": "封面图别再用默认模板了",
+      "desc": "封面只做一件事：让人三秒内知道这条讲什么。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794703320000,
+      "hot": 35400,
+      "url": "https://example.invalid/hot/xhs/007",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/007"
+    },
+    {
+      "id": "xhs_hot_008",
+      "title": "涨粉慢，可能是账号定位没讲清",
+      "desc": "用一句话说清你是谁、帮谁、解决什么问题。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794703680000,
+      "hot": 33100,
+      "url": "https://example.invalid/hot/xhs/008",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/008"
+    },
+    {
+      "id": "xhs_hot_009",
+      "title": "内容日历怎么做才不累",
+      "desc": "先定栏目，再排选题，最后留两天缓冲。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794704040000,
+      "hot": 30900,
+      "url": "https://example.invalid/hot/xhs/009",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/009"
+    },
+    {
+      "id": "xhs_hot_010",
+      "title": "收藏夹里的方法为什么用不上",
+      "desc": "收藏不等于行动，给每条方法配一个当天动作。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794704400000,
+      "hot": 28700,
+      "url": "https://example.invalid/hot/xhs/010",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/010"
+    },
+    {
+      "id": "xhs_hot_011",
+      "title": "一天只做三件事的实验",
+      "desc": "把待办砍到三条，完成率反而更高。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794704760000,
+      "hot": 26500,
+      "url": "https://example.invalid/hot/xhs/011",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/011"
+    },
+    {
+      "id": "xhs_hot_012",
+      "title": "通勤时间这样用，效率翻倍",
+      "desc": "听、记、排三件事，到工位直接开工。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794705120000,
+      "hot": 24400,
+      "url": "https://example.invalid/hot/xhs/012",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/012"
+    },
+    {
+      "id": "xhs_hot_013",
+      "title": "复盘不是总结，是找下一步",
+      "desc": "每周只回答三个问题：做成了什么、卡在哪、下周改什么。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794705480000,
+      "hot": 22300,
+      "url": "https://example.invalid/hot/xhs/013",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/013"
+    },
+    {
+      "id": "xhs_hot_014",
+      "title": "用一张表管理所有选题",
+      "desc": "状态、来源、对标证据三列就够。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794705840000,
+      "hot": 20100,
+      "url": "https://example.invalid/hot/xhs/014",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/014"
+    },
+    {
+      "id": "xhs_hot_015",
+      "title": "做内容先想清楚给谁看",
+      "desc": "先写用户画像，再写选题，最后才写标题。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794706200000,
+      "hot": 18400,
+      "url": "https://example.invalid/hot/xhs/015",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/015"
+    },
+    {
+      "id": "xhs_hot_016",
+      "title": "爆款拆解别只看数据",
+      "desc": "看开头三秒、信息密度和结尾动作。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794706560000,
+      "hot": 16700,
+      "url": "https://example.invalid/hot/xhs/016",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/016"
+    },
+    {
+      "id": "xhs_hot_017",
+      "title": "模板能让更新变轻松吗",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794706920000,
+      "hot": 14900,
+      "url": "https://example.invalid/hot/xhs/017",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/017"
+    },
+    {
+      "id": "xhs_hot_018",
+      "title": "拖延不是懒，是任务太大",
+      "desc": "把任务切到 30 分钟内能完成的一段。",
+      "author": "热榜示例（虚构）",
+      "timestamp": 1794707280000,
+      "url": "https://example.invalid/hot/xhs/018",
+      "mobileUrl": "https://example.invalid/hot/xhs/m/018"
+    }
+  ]
+}
