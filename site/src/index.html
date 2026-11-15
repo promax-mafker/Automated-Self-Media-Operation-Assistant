@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>超级个体获客工作台 · 一个人的内容流水线</title>
+<meta name="description" content="把选题、文案、图文视频、发布包、数据回流与复盘串成六条可单独调用的流水线。单机、SQLite、0 外部服务，离线可跑。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="超级个体获客工作台">
+<meta property="og:description" content="选题 → 文案 → 图文/视频 → 发布包 → 数据回流 → 复盘，一个人的内容流水线。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0B0F'/%3E%3Crect x='7' y='9' width='18' height='3' rx='1.5' fill='%23FF5A36'/%3E%3Crect x='7' y='15' width='12' height='3' rx='1.5' fill='%23F5C451'/%3E%3Crect x='7' y='21' width='8' height='3' rx='1.5' fill='%23EDEDF2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="site">
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>获客工作台</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#capability">能力</a>
+      <a href="#pipeline">流水线</a>
+      <a href="#demo">在线 demo</a>
+      <a href="#start">上手</a>
+      <a href="examples/report.html">样例周报</a>
+      <a class="nav-cta" href="https://github.com/promax-mafker/Automated-Self-Media-Operation-Assistant">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">开源 · 单机 · 单用户 · 不抓取 · 不自动发布</p>
+    <h1>一个人的<br><em>内容流水线</em></h1>
+    <p class="lede">
+      把「选题 → 文案 → 图文 / 短视频 → 发布包 → 数据回流 → 复盘」做成六条可以单独调用、
+      也能串起来的流水线。单进程 Python + SQLite，不装 Docker、不装 Node、不开浏览器；
+      不接外部服务时，全链路也能离线跑完。
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="console/index.html">看在线 demo</a>
+      <a class="btn" href="#start">5 分钟跑起来</a>
+      <a class="btn btn-ghost" href="https://github.com/promax-mafker/Automated-Self-Media-Operation-Assistant">源码仓库 →</a>
+    </div>
+    <dl class="stats">
+      <div><dt>6</dt><dd>条流水线</dd></div>
+      <div><dt>8</dt><dd>套图文 / 海报模板</dd></div>
+      <div><dt>11s</dt><dd>demo 全链路（离线）</dd></div>
+      <div><dt>0</dt><dd>个外部服务依赖</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="wrap">
+    <h2>为什么不是「再装五个工具」</h2>
+    <p class="section-lede">
+      做内容的人不缺工具，缺的是一条能复算的链路。拼装现成平台能跑，但三件事会一直疼。
+    </p>
+    <div class="grid grid-3">
+      <article class="card">
+        <h3>口径不一致</h3>
+        <p>选题看热榜、文案靠印象、复盘看平台后台，三处的「好」不是同一个标准，下周照样凭感觉。</p>
+        <p class="card-fix">→ 统一成一张表：指标口径写进文档，周报与选题打分共用同一份数据。</p>
+      </article>
+      <article class="card">
+        <h3>数据回不来</h3>
+        <p>发出去就断了。作品数据躺在不同平台，导出格式各不相同，能用的只有手抄的几张截图。</p>
+        <p class="card-fix">→ 导入平台导出 CSV，按 URL 幂等回灌，复盘直接读本地库。</p>
+      </article>
+      <article class="card">
+        <h3>每一步都要重来</h3>
+        <p>选题、写稿、排版、出图、剪视频、发布、记录，七个动作七种工具，每次从零开始。</p>
+        <p class="card-fix">→ 每步都是可单独调用的 stage，产物落盘落库，换素材不用换流程。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="capability">
+  <div class="wrap">
+    <h2>七项能力，六条流水线</h2>
+    <p class="section-lede">每一条都能单独跑，也能接上前一条的产物。命令行是主入口，控制台是只读视图。</p>
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr><th>能力</th><th>流水线</th><th>命令</th><th>产出</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>数据复盘与账号洞察</td><td><code>review</code></td>
+            <td><code>wb review import</code> / <code>wb review week</code></td>
+            <td>10 项指标、分组对比、Top5 / Bottom5、三条带数字的动作</td>
+          </tr>
+          <tr>
+            <td>选题策划与爆款对标</td><td><code>topic</code></td>
+            <td><code>wb topic suggest</code> / <code>wb topic benchmark</code></td>
+            <td>带热度、匹配度、对标证据的选题卡</td>
+          </tr>
+          <tr>
+            <td>多类型文案</td><td><code>copy</code></td>
+            <td><code>wb copy gen</code> / <code>wb copy lint</code></td>
+            <td>5 类 × 2 长度 = 10 条，带引用与合规结果</td>
+          </tr>
+          <tr>
+            <td>图文与海报</td><td><code>visual</code></td>
+            <td><code>wb render poster</code> / <code>wb render carousel</code></td>
+            <td>1080×1440 / 1080×1080 / 1080×1920 的 PNG，九图带 manifest</td>
+          </tr>
+          <tr>
+            <td>短视频</td><td><code>video</code></td>
+            <td><code>wb video build</code></td>
+            <td>1080×1920 竖版 H.264，卡片分镜，≤60 秒</td>
+          </tr>
+          <tr>
+            <td>发布包与数据回流</td><td><code>pack</code></td>
+            <td><code>wb pack build</code> / <code>wb pack log</code> / <code>wb pack backfill</code></td>
+            <td>文案 + 图片 + manifest + 发布说明；回灌后进 <code>review</code></td>
+          </tr>
+          <tr>
+            <td>知识库</td><td>被 <code>copy</code> / <code>topic</code> 调用</td>
+            <td><code>wb kb add</code> / <code>wb kb ask</code> / <code>wb kb eval</code></td>
+            <td>SQLite FTS5 + jieba 分词的检索片段与引用</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pipeline">
+  <div class="wrap">
+    <h2>一条闭环，每步都能单独验</h2>
+    <p class="section-lede">箭头是数据流；最后那条回线是「本周哪类内容有效」反向喂回选题打分。</p>
+
+    <div class="flow" role="img" aria-label="流水线：信源与对标库汇入选选题，再生成文案，分流做图文或视频，合成发布包，人工发布后数据回灌，最后进入复盘">
+      <div class="flow-row">
+        <div class="node node-src"><span>热榜 / RSS</span><span>对标作品库</span><span>知识库</span></div>
+        <div class="arrow">→</div>
+        <div class="node node-main"><b>topic</b><small>选题卡</small></div>
+        <div class="arrow">→</div>
+        <div class="node node-main"><b>copy</b><small>10 条文案</small></div>
+        <div class="arrow">→</div>
+        <div class="node node-main"><b>visual</b><small>图文 / 海报</small></div>
+      </div>
+      <div class="flow-row flow-row-2">
+        <div class="node node-main"><b>video</b><small>≤60 秒竖版</small></div>
+        <div class="arrow">→</div>
+        <div class="node node-main"><b>pack</b><small>发布包</small></div>
+        <div class="arrow">→</div>
+        <div class="node node-human"><b>人工发布</b><small>本工具不登录、不代发</small></div>
+        <div class="arrow">→</div>
+        <div class="node node-main"><b>review</b><small>周报 + 结论</small></div>
+      </div>
+      <p class="flow-loop">← 复盘结论回灌选题打分：<code>burst_ratio</code>、时段、时长、内容类型</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="demo">
+  <div class="wrap">
+    <h2>在线 demo：用虚构数据预渲染</h2>
+    <p class="section-lede">
+      下面是本地跑完 <code>bash scripts/demo.sh</code> 之后的六个控制台页面，已预渲染成静态快照。
+      演示账号叫 <code>demo_xhs</code>，所有数字都是虚构的。
+    </p>
+    <div class="grid grid-3 demo-grid">
+      <a class="demo-card" href="console/index.html">
+        <h3>概览</h3>
+        <p>本周发布数、播放中位数、Top3 选题、待发布包、最近一次任务状态</p>
+      </a>
+      <a class="demo-card" href="console/topics.html">
+        <h3>选题池</h3>
+        <p>分数、来源、状态与证据，可一键生成文案</p>
+      </a>
+      <a class="demo-card" href="console/copies.html">
+        <h3>文案</h3>
+        <p>五类 × 两长度，带合规徽标与引用</p>
+      </a>
+      <a class="demo-card" href="console/assets.html">
+        <h3>素材</h3>
+        <p>海报与短视频的缩略网格</p>
+      </a>
+      <a class="demo-card" href="console/packs.html">
+        <h3>发布包</h3>
+        <p>包的状态、平台、manifest 与建议发布时间</p>
+      </a>
+      <a class="demo-card" href="console/kb.html">
+        <h3>知识库问答</h3>
+        <p>FTS5 + jieba 检索，回答带命中分数</p>
+      </a>
+    </div>
+
+    <h3 class="sub-h">真实产物</h3>
+    <div class="grid grid-3 artifacts">
+      <figure class="artifact">
+        <img src="assets/poster.png" alt="demo 生成的海报：清单式干货版式，1080×1440" loading="lazy">
+        <figcaption>海报 · 1080×1440 · Pillow + 声明式模板 + 内置 Noto Sans SC 子集</figcaption>
+      </figure>
+      <figure class="artifact">
+        <video src="assets/video.mp4" controls preload="metadata" playsinline></video>
+        <figcaption>短视频 · 1080×1920 · H.264 · 25fps · 卡片分镜</figcaption>
+      </figure>
+      <div class="artifact artifact-text">
+        <h4>发布包</h4>
+        <ul class="ticks">
+          <li><code>文案.md</code>（首行标题 + 标签行，按平台格式）</li>
+          <li><code>图片/</code> / <code>视频/</code></li>
+          <li><code>manifest.json</code>：标题、正文、标签、校验和、<code>ai_generated</code></li>
+          <li><code>发布说明.md</code>：AI 声明话术、合规结果、建议发布时间与依据</li>
+        </ul>
+        <p class="artifact-links">
+          <a class="btn btn-small" href="assets/pack.zip">下载 demo 发布包</a>
+          <a class="btn btn-small btn-ghost" href="examples/report.html">看 demo 周报 →</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="start">
+  <div class="wrap">
+    <h2>5 分钟跑起来</h2>
+    <p class="section-lede">只需要 Python 3.10+。依赖走清华镜像（本机代理下 PyPI 直连会 SSL 中断）。</p>
+    <div class="code-card">
+      <button class="copy" type="button" data-copy="quick">复制</button>
+      <pre id="quick"><code>git clone https://github.com/promax-mafker/Automated-Self-Media-Operation-Assistant
+cd Automated-Self-Media-Operation-Assistant
+
+bash scripts/setup.sh        # 建 .venv，pip install -e ".[dev]"
+wb doctor                    # 环境、数据库版本、各流水线的 stage 覆盖
+
+bash scripts/demo.sh         # 离线跑通全链路，产物在 out/demo-&lt;时间戳&gt;/
+WB_HOME=out/demo-&lt;时间戳&gt;/.wb wb serve --port 8077
+                             # 打开 http://127.0.0.1:8077/
+
+bash scripts/verify.sh       # ruff + pytest + demo + doctor，任一失败即非 0</code></pre>
+    </div>
+    <p class="hint">
+      接真实模型只改环境变量：<code>WB_LLM=openai</code>、<code>WB_LLM_BASE_URL</code>（任意 OpenAI 兼容端点）、
+      <code>WB_LLM_API_KEY</code>、<code>WB_LLM_MODEL</code>。不设 key 时自动走 stub，全链路仍可离线跑。
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt" id="tradeoffs">
+  <div class="wrap">
+    <h2>为什么不用现成的开源平台拼</h2>
+    <p class="section-lede">调研过一圈，三条主流路线都被否掉，理由写在这里，方便你复核。</p>
+    <div class="grid grid-3">
+      <article class="card card-quiet">
+        <h3>AiToEarn</h3>
+        <p>最接近「开源版获客工作台」，但平台授权默认走官方 Relay，且官方不接受外部 PR——数据流与改造都不受控。</p>
+        <p class="card-fix">留作将来的 <code>Publisher</code> 适配器。</p>
+      </article>
+      <article class="card card-quiet">
+        <h3>Coze Studio / RAGFlow</h3>
+        <p>部署与加固成本高于本项目全部业务代码。三万字以内的知识库，SQLite FTS5 就够。</p>
+        <p class="card-fix">知识库超过 500 篇或需要多模态时再考虑。</p>
+      </article>
+      <article class="card card-quiet">
+        <h3>poster-design / MediaCrawler</h3>
+        <p>前者 AGPL，对外提供服务有传染风险；后者明确禁止商用，而「爆款对标」恰恰最想用它。</p>
+        <p class="card-fix">渲染用 Pillow 自绘；数据只导入平台官方导出。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="limits">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div>
+        <h2>边界写进代码，不只写在文档</h2>
+        <ul class="ticks">
+          <li><strong>不抓取。</strong>没有爬虫、没有平台 API 调用；数据来自你自己导出的 CSV。</li>
+          <li><strong>不登录、不自动发布。</strong>发布只导出包并记录 URL，发不发由人决定。</li>
+          <li><strong>AI 标识。</strong>发布包 manifest 固定 <code>ai_generated: true</code>，附可复制的声明话术。</li>
+          <li><strong>广告法闸门。</strong>极限词与敏感表述命中即标红，退出码 3，交人判断。</li>
+          <li><strong>字体与素材。</strong>只内置 Noto Sans SC（SIL OFL），不用来源不明的图片与 BGM。</li>
+        </ul>
+      </div>
+      <div>
+        <h2>已知限制</h2>
+        <ul class="ticks ticks-muted">
+          <li>「爆款对标」的证据强度，取决于你导入的数据质量。</li>
+          <li>海报是声明式版式（文字、色块、列表），复杂设计需要换一个 Renderer。</li>
+          <li>视频是卡片分镜，不做数字人与自动剪辑。</li>
+          <li>单机单用户，没有多租户、权限与计费。</li>
+          <li>默认走 stub 模型时，产物结构合法但内容是占位文本。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="roadmap">
+  <div class="wrap">
+    <h2>下一步（按性价比排）</h2>
+    <ol class="roadmap">
+      <li><b>接真实模型跑对比</b><span>同一选题用两家模型各生成 10 条，人工盲评。</span></li>
+      <li><b>换 HTML/CSS 渲染</b><span>加一个 Playwright Renderer，版式上限高一档，接口不变。</span></li>
+      <li><b>接半自动发布</b><span><code>Publisher</code> 接 social-auto-upload，默认 dry-run，账号风险自担。</span></li>
+      <li><b>多账号 / 多客户</b><span>需要权限与数据隔离时，才考虑迁到 Coze Studio 这类底座。</span></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-title">超级个体获客工作台</p>
+      <p class="footer-note">
+        演示数据全部虚构（<code>demo_</code> 前缀或带「（虚构）」），不代表任何真实账号表现。<br>
+        本站是 <code>bash scripts/demo.sh</code> 的静态快照，由 <code>site/build.py</code> 生成。
+      </p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="https://github.com/promax-mafker/Automated-Self-Media-Operation-Assistant">源码</a></li>
+      <li><a href="https://github.com/promax-mafker/Automated-Self-Media-Operation-Assistant/blob/main/docs/adr/0001-mvp-architecture.md">架构 ADR</a></li>
+      <li><a href="https://github.com/promax-mafker/Automated-Self-Media-Operation-Assistant/blob/main/docs/quickstart.md">快速开始</a></li>
+      <li><a href="https://github.com/promax-mafker/Automated-Self-Media-Operation-Assistant/issues">反馈</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('button.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var pre = document.getElementById(btn.dataset.copy);
+    if (!pre) return;
+    var text = pre.innerText;
+    var done = function () {
+      btn.textContent = '已复制';
+      setTimeout(function () { btn.textContent = '复制'; }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var range = document.createRange();
+      range.selectNodeContents(pre);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      try { document.execCommand('copy'); } catch (e) {}
+      sel.removeAllRanges();
+      done();
+    }
+  });
+});
+</script>
+</body>
+</html>

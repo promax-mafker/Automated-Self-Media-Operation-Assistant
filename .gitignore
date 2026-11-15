@@ -20,3 +20,7 @@ htmlcov/
 .DS_Store
 .idea/
 .vscode/
+
+# demo 产物与站点构建输出（站点发布走 gh-pages 分支）
+out/
+site/dist/
