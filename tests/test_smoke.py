@@ -17,6 +17,7 @@ from workbench.config import Config
 from workbench.contracts import (
     get_composer,
     get_publisher,
+    get_renderer,
     get_source_adapters,
 )
 from workbench.errors import PipelineFailed, Unavailable
@@ -185,12 +186,15 @@ def test_runner_stage_exception_marks_job_failed(
 def test_null_adapters_degrade_without_crashing(
     cfg: Config, tmp_path: Path, caplog: pytest.LogCaptureFixture
 ) -> None:
-    # T05 实现 source adapters 后，这里改为覆盖仍未实现的 T07/T08 适配器。
+    # 这条测试只断言「尚未实现的适配器会优雅降级」，不要去断言别的 Ticket
+    # 什么时候实现：T04/T05/T06/T07 落地后各自都要改这里，成本大于收益。
+    # 现在只剩 T08（发布包）未实现。
     with caplog.at_level(logging.WARNING):
         with pytest.raises(Unavailable):
-            get_composer().compose(storyboard={}, out=tmp_path / "never.mp4")
-        with pytest.raises(Unavailable):
             get_publisher().build(pack={}, out=tmp_path / "never.zip")
+        # 已实现的适配器返回真实实现，调用什么都不做，只确认可调用。
+        assert callable(get_composer().compose)
+        assert callable(get_renderer().render)
 
         assert [adapter.name for adapter in get_source_adapters(cfg)] == [
             "hotlist",
