@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "workbench"
+version = "0.1.0"
+description = "超级个体获客工作台（MVP）"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "jinja2",
+  "typer",
+  "rich",
+  "httpx",
+  "pydantic>=2",
+  "pillow",
+  "jieba",
+  "feedparser",
+  "beautifulsoup4",
+  "imageio-ffmpeg",
+  "edge-tts",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+]
+
+[project.scripts]
+wb = "workbench.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["workbench*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+extend-exclude = [".venv", ".wb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# Typer 的惯用写法是在函数默认值里调用 typer.Option/typer.Argument。
+ignore = ["B008"]
