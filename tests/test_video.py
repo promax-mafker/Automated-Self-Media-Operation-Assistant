@@ -85,6 +85,15 @@ def test_default_template_covers_three_card_types() -> None:
     assert all(len(scene.points) <= MAX_POINTS for scene in board.scenes)
 
 
+def test_cli_help_lists_video_subcommands() -> None:
+    result = _invoke(["video", "--help"])
+    output = _combined(result)
+
+    assert result.exit_code == 0, output
+    assert "template" in output
+    assert "build" in output
+
+
 def test_cli_template_prints_usable_json(cli_env: Path) -> None:
     result = _invoke(["video", "template"])
     output = _combined(result)
