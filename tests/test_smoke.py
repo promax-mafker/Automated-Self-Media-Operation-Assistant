@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import logging
 import sqlite3
 from pathlib import Path
 
@@ -15,6 +14,7 @@ from typer.testing import CliRunner
 from workbench.cli import app
 from workbench.config import Config
 from workbench.contracts import (
+    NullPublisher,
     get_composer,
     get_publisher,
     get_renderer,
@@ -128,11 +128,13 @@ def test_run_demo_writes_manifest_db_rows_and_valid_png(cli_env: Path, tmp_path:
     assert _count(db_path, "SELECT COUNT(*) FROM asset") == 2
 
 
-def test_run_missing_stage_exits_2_and_marks_job_failed(cli_env: Path) -> None:
+def test_run_pack_without_required_param_exits_2_and_marks_job_failed(
+    cli_env: Path,
+) -> None:
     result = _invoke(["run", "pack"])
     output = _combined(result)
     assert result.exit_code == 2, output
-    assert "MissingStage: pack/pack_build 尚未实现（T08）" in output
+    assert "MissingParam: pack/pack_build 缺少必需参数 'copy'" in output
 
     connection = sqlite3.connect(cli_env / "wb.sqlite3")
     try:
@@ -144,7 +146,7 @@ def test_run_missing_stage_exits_2_and_marks_job_failed(cli_env: Path) -> None:
     assert len(rows) == 1
     pipeline, stage, status, error = rows[0]
     assert (pipeline, stage, status) == ("pack", "pack_build", "failed")
-    assert "MissingStage: pack/pack_build 尚未实现（T08）" in error
+    assert "MissingParam: pack/pack_build 缺少必需参数 'copy'" in error
 
 
 def test_runner_stage_exception_marks_job_failed(
@@ -183,26 +185,21 @@ def test_runner_stage_exception_marks_job_failed(
     assert "boom 故意失败" in failed[0].error
 
 
-def test_null_adapters_degrade_without_crashing(
-    cfg: Config, tmp_path: Path, caplog: pytest.LogCaptureFixture
+def test_null_adapters_still_degrade_when_called_directly(
+    cfg: Config, tmp_path: Path
 ) -> None:
-    # 这条测试只断言「尚未实现的适配器会优雅降级」，不要去断言别的 Ticket
-    # 什么时候实现：T04/T05/T06/T07 落地后各自都要改这里，成本大于收益。
-    # 现在只剩 T08（发布包）未实现。
-    with caplog.at_level(logging.WARNING):
-        with pytest.raises(Unavailable):
-            get_publisher().build(pack={}, out=tmp_path / "never.zip")
-        # 已实现的适配器返回真实实现，调用什么都不做，只确认可调用。
-        assert callable(get_composer().compose)
-        assert callable(get_renderer().render)
-
-        assert [adapter.name for adapter in get_source_adapters(cfg)] == [
-            "hotlist",
-            "rss",
-            "local",
-        ]
-
-    assert "退回 Null 实现" in caplog.text
+    # 全部适配器都已实现；Null 实现仍须在显式调用时优雅降级，
+    # 已实现的适配器则返回真实对象。
+    with pytest.raises(Unavailable):
+        NullPublisher().build(pack={}, out=tmp_path / "never.zip")
+    assert callable(get_publisher().build)
+    assert callable(get_composer().compose)
+    assert callable(get_renderer().render)
+    assert [adapter.name for adapter in get_source_adapters(cfg)] == [
+        "hotlist",
+        "rss",
+        "local",
+    ]
 
 
 def test_cli_help_lists_commands_and_run_options(cli_env: Path) -> None:
