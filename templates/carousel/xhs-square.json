@@ -1,0 +1,267 @@
+{
+  "id": "xhs-square",
+  "label": "方形图文四图",
+  "kind": "carousel",
+  "canvas": {
+    "width": 1080,
+    "height": 1080,
+    "background": "#F3F6FF",
+    "pad": 72
+  },
+  "pages": [
+    {
+      "name": "封面",
+      "blocks": [
+        {
+          "type": "chips",
+          "slot": "tags",
+          "x": 72,
+          "y": 96,
+          "size": 26,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "background": "#FFC53D",
+          "max_width": 936,
+          "max_rows": 1,
+          "gap": 16,
+          "padding": 12,
+          "radius": 999,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 200,
+          "size": 80,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 3,
+          "line_height": 108,
+          "align": "left"
+        },
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 568,
+          "width": 120,
+          "thickness": 8,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "subtitle",
+          "x": 72,
+          "y": 616,
+          "size": 36,
+          "weight": "regular",
+          "color": "#5F6368",
+          "max_width": 880,
+          "max_lines": 3,
+          "line_height": 56,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 960,
+          "size": 24,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "内容 1",
+      "blocks": [
+        {
+          "type": "text",
+          "slot": "kicker",
+          "x": 72,
+          "y": 96,
+          "size": 26,
+          "weight": "bold",
+          "color": "#FF5A36",
+          "max_width": 600,
+          "max_lines": 1,
+          "line_height": 42,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 180,
+          "size": 56,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 78,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "body",
+          "x": 72,
+          "y": 384,
+          "size": 32,
+          "weight": "regular",
+          "color": "#4A4A4A",
+          "max_width": 936,
+          "max_lines": 5,
+          "line_height": 54,
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "slot": "points",
+          "x": 72,
+          "y": 700,
+          "size": 28,
+          "weight": "regular",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 3,
+          "line_height": 40,
+          "item_gap": 12,
+          "bullet": "·",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "内容 2",
+      "blocks": [
+        {
+          "type": "text",
+          "slot": "kicker",
+          "x": 72,
+          "y": 96,
+          "size": 26,
+          "weight": "bold",
+          "color": "#FF5A36",
+          "max_width": 600,
+          "max_lines": 1,
+          "line_height": 42,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 180,
+          "size": 56,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 78,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "body",
+          "x": 72,
+          "y": 384,
+          "size": 32,
+          "weight": "regular",
+          "color": "#4A4A4A",
+          "max_width": 936,
+          "max_lines": 5,
+          "line_height": 54,
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "slot": "points",
+          "x": 72,
+          "y": 700,
+          "size": 28,
+          "weight": "regular",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 3,
+          "line_height": 40,
+          "item_gap": 12,
+          "bullet": "·",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "结尾",
+      "blocks": [
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 120,
+          "width": 120,
+          "thickness": 8,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 180,
+          "size": 76,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 100,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "subtitle",
+          "x": 72,
+          "y": 430,
+          "size": 34,
+          "weight": "regular",
+          "color": "#5F6368",
+          "max_width": 880,
+          "max_lines": 3,
+          "line_height": 54,
+          "align": "left"
+        },
+        {
+          "type": "chips",
+          "slot": "tags",
+          "x": 72,
+          "y": 640,
+          "size": 24,
+          "weight": "regular",
+          "color": "#FFFFFF",
+          "background": "#1F1F1F",
+          "max_width": 936,
+          "max_rows": 1,
+          "gap": 12,
+          "padding": 10,
+          "radius": 999,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 950,
+          "size": 24,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 40,
+          "align": "left"
+        }
+      ]
+    }
+  ]
+}

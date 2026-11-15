@@ -1,0 +1,74 @@
+{
+  "id": "poster-quote",
+  "label": "方形金句海报",
+  "kind": "poster",
+  "canvas": {
+    "width": 1080,
+    "height": 1080,
+    "background": "#F6F1EA",
+    "pad": 72
+  },
+  "blocks": [
+    {
+      "type": "panel",
+      "x": 72,
+      "y": 96,
+      "width": 936,
+      "height": 680,
+      "fill": "#FFFFFF",
+      "radius": 36,
+      "stroke": "#E7D9C8",
+      "stroke_width": 2
+    },
+    {
+      "type": "text",
+      "slot": "body",
+      "x": 132,
+      "y": 176,
+      "size": 44,
+      "weight": "regular",
+      "color": "#3A2E2A",
+      "max_width": 816,
+      "max_lines": 7,
+      "line_height": 72,
+      "align": "left"
+    },
+    {
+      "type": "divider",
+      "x": 132,
+      "y": 740,
+      "width": 120,
+      "thickness": 4,
+      "color": "#C9A227"
+    },
+    {
+      "type": "text",
+      "slot": "author",
+      "x": 132,
+      "y": 808,
+      "size": 32,
+      "weight": "bold",
+      "color": "#8C6A5D",
+      "max_width": 816,
+      "max_lines": 1,
+      "line_height": 48,
+      "align": "left"
+    },
+    {
+      "type": "chips",
+      "slot": "tags",
+      "x": 132,
+      "y": 904,
+      "size": 24,
+      "weight": "regular",
+      "color": "#3A2E2A",
+      "background": "#F1D9C0",
+      "max_width": 816,
+      "max_rows": 1,
+      "gap": 12,
+      "padding": 10,
+      "radius": 999,
+      "align": "left"
+    }
+  ]
+}

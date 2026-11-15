@@ -1,0 +1,90 @@
+{
+  "id": "poster-story",
+  "label": "竖版故事海报",
+  "kind": "poster",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "background": "#0E1B25",
+    "pad": 72
+  },
+  "blocks": [
+    {
+      "type": "chips",
+      "slot": "kicker",
+      "x": 72,
+      "y": 96,
+      "size": 28,
+      "weight": "bold",
+      "color": "#101820",
+      "background": "#7AD3C3",
+      "max_width": 936,
+      "max_rows": 1,
+      "gap": 16,
+      "padding": 12,
+      "radius": 999,
+      "align": "left"
+    },
+    {
+      "type": "image",
+      "slot": "image_path",
+      "x": 72,
+      "y": 184,
+      "width": 936,
+      "height": 760,
+      "fill": "#1B2A36",
+      "stroke": "#2E4254",
+      "radius": 32,
+      "label": "示意图（虚构）",
+      "label_size": 32,
+      "label_color": "#7A8A99"
+    },
+    {
+      "type": "text",
+      "slot": "title",
+      "x": 72,
+      "y": 1000,
+      "size": 72,
+      "weight": "bold",
+      "color": "#FFFFFF",
+      "max_width": 936,
+      "max_lines": 2,
+      "line_height": 96,
+      "align": "left"
+    },
+    {
+      "type": "divider",
+      "x": 72,
+      "y": 1250,
+      "width": 96,
+      "thickness": 8,
+      "color": "#FF5A36"
+    },
+    {
+      "type": "text",
+      "slot": "body",
+      "x": 72,
+      "y": 1300,
+      "size": 36,
+      "weight": "regular",
+      "color": "#C7D2DA",
+      "max_width": 936,
+      "max_lines": 5,
+      "line_height": 60,
+      "align": "left"
+    },
+    {
+      "type": "text",
+      "slot": "footer",
+      "x": 72,
+      "y": 1760,
+      "size": 26,
+      "weight": "regular",
+      "color": "#7A8A99",
+      "max_width": 936,
+      "max_lines": 1,
+      "line_height": 42,
+      "align": "left"
+    }
+  ]
+}
