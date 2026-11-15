@@ -276,6 +276,63 @@ def test_build_without_assets_and_failed_compliance(cli_env: Path) -> None:
         conn.close()
 
 
+def test_build_douyin_with_explicit_video_asset(cli_env: Path) -> None:
+    cfg, conn = _open(cli_env)
+    try:
+        copy = _seed_copy(conn, cli_env, assets=1)
+        video_path = cli_env / "artifacts" / "demo.mp4"
+        video_path.write_bytes(b"\x00" * 64)
+        video = Asset(
+            id=new_id("asset"),
+            copy_set_id=copy.id,
+            kind="video",
+            template="default",
+            path=video_path.relative_to(cli_env).as_posix(),
+            width=1080,
+            height=1920,
+            duration_sec=12.0,
+            bytes=video_path.stat().st_size,
+            meta={},
+            created_at=CREATED_AT,
+        )
+        repo.insert_asset(conn, video)
+
+        result = _invoke(
+            [
+                "pack",
+                "build",
+                "--copy",
+                copy.id,
+                "--platform",
+                "douyin",
+                "--assets",
+                video.id,
+            ]
+        )
+        assert result.exit_code == 0, _combined(result)
+        pack = repo.list_packs(conn)[0]
+        pack_dir = pack_path(cfg, pack)
+        files = {
+            path.relative_to(pack_dir).as_posix()
+            for path in pack_dir.rglob("*")
+            if path.is_file()
+        }
+        assert "视频/video.mp4" in files
+        assert "图片/01.png" not in files
+        manifest = load_manifest(pack_dir / MANIFEST_FILENAME)
+        assert manifest["platform"] == "douyin"
+        assert [item["path"] for item in manifest["assets"]] == ["视频/video.mp4"]
+        assert manifest["assets"][0]["duration_sec"] == 12.0
+        notes = (pack_dir / "发布说明.md").read_text(encoding="utf-8")
+        assert "抖音" in notes
+        assert "口播稿" in notes
+        copy_text = (pack_dir / "文案.md").read_text(encoding="utf-8")
+        assert copy_text.splitlines()[0] == "发布包验收标题"
+        assert "#内容运营" in copy_text
+    finally:
+        conn.close()
+
+
 def test_build_rejects_missing_copy_and_non_empty_out(cli_env: Path, tmp_path: Path) -> None:
     cfg, conn = _open(cli_env)
     try:
