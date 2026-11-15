@@ -1,0 +1,31 @@
+post_id,account,platform,title,url,published_at,content_type,topic_tags,duration_sec,caption
+post_xhs_001,demo_xhs,xhs,3 个动作让周报不再堆指标,https://example.invalid/demo/post_xhs_001,2026-11-02T08:30:00+08:00,video,复盘|效率,12,用三个动作替代堆指标。
+post_xhs_002,demo_xhs,xhs,一张图看懂账号数据复盘,https://example.invalid/demo/post_xhs_002,2026-11-03T12:15:00+08:00,image_text,复盘|数据,,复盘先看互动与收藏。
+post_xhs_003,demo_xhs,xhs,60 秒讲清选题到发布,https://example.invalid/demo/post_xhs_003,2026-11-04T19:30:00+08:00,video,选题|流程,75,长视频的完播率明显更低。
+post_xhs_004,demo_xhs,xhs,周报模板：三列就够,https://example.invalid/demo/post_xhs_004,2026-11-05T13:00:00+08:00,video,模板|效率,13,短模板更容易看完。
+post_xhs_005,demo_xhs,xhs,复盘先看哪三个数,https://example.invalid/demo/post_xhs_005,2026-11-06T09:15:00+08:00,image_text,复盘|指标,,先看中位数、互动率、收藏率。
+post_xhs_006,demo_xhs,xhs,把发布节奏固定下来,https://example.invalid/demo/post_xhs_006,2026-11-07T20:00:00+08:00,video,发布|节奏,28,固定节奏比追热点更稳。
+post_xhs_007,demo_xhs,xhs,15 秒讲完一个选题,https://example.invalid/demo/post_xhs_007,2026-11-08T12:40:00+08:00,video,选题|短视频,14,短时长适合讲单点。
+post_xhs_008,demo_xhs,xhs,账号复盘的长文模板,https://example.invalid/demo/post_xhs_008,2026-11-08T02:00:00+08:00,article,复盘|模板,,深夜发布的长文样本。
+post_xhs_009,demo_xhs,xhs,数据不好时先查这三处,https://example.invalid/demo/post_xhs_009,2026-11-08T09:30:00+08:00,image_text,诊断|数据,,先查选题、封面、发布时间。
+post_xhs_010,demo_xhs,xhs,一周涨粉 45 的复盘,https://example.invalid/demo/post_xhs_010,2026-11-06T21:30:00+08:00,video,涨粉|复盘,22,本周 views 最高的一篇。
+post_xhs_011,demo_xhs,xhs,上周复盘：先把指标减半,https://example.invalid/demo/post_xhs_011,2026-10-27T12:00:00+08:00,image_text,复盘|效率,,历史样本，用于 P90。
+post_xhs_012,demo_xhs,xhs,发布节奏实验第一周,https://example.invalid/demo/post_xhs_012,2026-10-30T20:00:00+08:00,video,发布|实验,25,历史样本，用于 P90。
+post_xhs_013,demo_xhs,xhs,15 秒模板复用,https://example.invalid/demo/post_xhs_013,2026-10-21T09:00:00+08:00,video,模板|短视频,14,历史样本，用于 P90。
+post_xhs_014,demo_xhs,xhs,复盘表格的三种列,https://example.invalid/demo/post_xhs_014,2026-10-24T18:30:00+08:00,image_text,复盘|模板,,历史样本，用于 P90。
+post_bench_a_001,demo_xhs_bench_a,xhs,对标 A：复盘卡片拆解,https://example.invalid/demo/post_bench_a_001,2026-10-20T12:00:00+08:00,image_text,对标|复盘,,对标账号样例。
+post_bench_a_002,demo_xhs_bench_a,xhs,对标 A：30 秒讲流程,https://example.invalid/demo/post_bench_a_002,2026-10-23T19:00:00+08:00,video,对标|流程,30,对标账号样例。
+post_bench_a_003,demo_xhs_bench_a,xhs,对标 A：周报模板,https://example.invalid/demo/post_bench_a_003,2026-10-28T09:00:00+08:00,image_text,对标|模板,,对标账号样例。
+post_bench_a_004,demo_xhs_bench_a,xhs,对标 A：晚间发布实验,https://example.invalid/demo/post_bench_a_004,2026-10-31T21:00:00+08:00,video,对标|发布,18,对标账号样例。
+post_bench_a_005,demo_xhs_bench_a,xhs,对标 A：一周数据拆解,https://example.invalid/demo/post_bench_a_005,2026-11-03T12:00:00+08:00,image_text,对标|数据,,对标账号样例。
+post_bench_a_006,demo_xhs_bench_a,xhs,对标 A：45 秒长视频,https://example.invalid/demo/post_bench_a_006,2026-11-05T20:00:00+08:00,video,对标|视频,45,对标账号样例。
+post_bench_a_007,demo_xhs_bench_a,xhs,对标 A：12 秒快剪,https://example.invalid/demo/post_bench_a_007,2026-11-07T08:00:00+08:00,video,对标|短视频,12,对标账号样例。
+post_bench_a_008,demo_xhs_bench_a,xhs,对标 A：收藏率复盘,https://example.invalid/demo/post_bench_a_008,2026-11-08T18:00:00+08:00,image_text,对标|复盘,,对标账号样例。
+post_bench_b_001,demo_xhs_bench_b,xhs,对标 B：20 秒开头模板,https://example.invalid/demo/post_bench_b_001,2026-10-19T12:00:00+08:00,video,对标|模板,20,对标账号样例。
+post_bench_b_002,demo_xhs_bench_b,xhs,对标 B：复盘清单,https://example.invalid/demo/post_bench_b_002,2026-10-22T19:00:00+08:00,image_text,对标|复盘,,对标账号样例。
+post_bench_b_003,demo_xhs_bench_b,xhs,对标 B：15 秒爆款结构,https://example.invalid/demo/post_bench_b_003,2026-10-29T08:00:00+08:00,video,对标|短视频,15,对标账号样例。
+post_bench_b_004,demo_xhs_bench_b,xhs,对标 B：晚间涨粉复盘,https://example.invalid/demo/post_bench_b_004,2026-11-01T21:00:00+08:00,image_text,对标|涨粉,,对标账号样例。
+post_bench_b_005,demo_xhs_bench_b,xhs,对标 B：40 秒长视频,https://example.invalid/demo/post_bench_b_005,2026-11-02T12:00:00+08:00,video,对标|视频,40,对标账号样例。
+post_bench_b_006,demo_xhs_bench_b,xhs,对标 B：账号定位复盘,https://example.invalid/demo/post_bench_b_006,2026-11-04T19:00:00+08:00,image_text,对标|定位,,对标账号样例。
+post_bench_b_007,demo_xhs_bench_b,xhs,对标 B：13 秒口播,https://example.invalid/demo/post_bench_b_007,2026-11-06T09:00:00+08:00,video,对标|短视频,13,对标账号样例。
+post_bench_b_008,demo_xhs_bench_b,xhs,对标 B：一周三条动作,https://example.invalid/demo/post_bench_b_008,2026-11-08T20:00:00+08:00,image_text,对标|复盘,,对标账号样例。

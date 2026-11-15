@@ -129,10 +129,10 @@ def test_run_demo_writes_manifest_db_rows_and_valid_png(cli_env: Path, tmp_path:
 
 
 def test_run_missing_stage_exits_2_and_marks_job_failed(cli_env: Path) -> None:
-    result = _invoke(["run", "review"])
+    result = _invoke(["run", "pack"])
     output = _combined(result)
     assert result.exit_code == 2, output
-    assert "MissingStage: review/metrics_import 尚未实现（T02）" in output
+    assert "MissingStage: pack/pack_build 尚未实现（T08）" in output
 
     connection = sqlite3.connect(cli_env / "wb.sqlite3")
     try:
@@ -143,8 +143,8 @@ def test_run_missing_stage_exits_2_and_marks_job_failed(cli_env: Path) -> None:
         connection.close()
     assert len(rows) == 1
     pipeline, stage, status, error = rows[0]
-    assert (pipeline, stage, status) == ("review", "metrics_import", "failed")
-    assert "MissingStage: review/metrics_import 尚未实现（T02）" in error
+    assert (pipeline, stage, status) == ("pack", "pack_build", "failed")
+    assert "MissingStage: pack/pack_build 尚未实现（T08）" in error
 
 
 def test_runner_stage_exception_marks_job_failed(
