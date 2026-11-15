@@ -1,0 +1,4 @@
+handle,platform,display_name,is_benchmark,niche,note
+demo_xhs,xhs,示例账号（虚构）,0,职场成长,seed 虚构数据，不是真实平台数据
+demo_xhs_bench_a,xhs,对标账号 A（虚构）,1,职场成长,seed 虚构数据，不是真实平台数据
+demo_xhs_bench_b,xhs,对标账号 B（虚构）,1,职场成长,seed 虚构数据，不是真实平台数据

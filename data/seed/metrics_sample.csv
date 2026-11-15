@@ -1,0 +1,31 @@
+post_id,account,display_name,platform,title,url,published_at,content_type,topic_tags,duration_sec,caption,captured_at,views,likes,comments,shares,saves,follows,completion_rate,avg_watch_sec
+post_xhs_001,demo_xhs,示例账号（虚构）,xhs,3 个动作让周报不再堆指标,https://example.invalid/demo/post_xhs_001,2026-11-02T08:30:00+08:00,video,复盘|效率,12,用三个动作替代堆指标。,2026-11-09T10:00:00+08:00,4700,190,20,20,45,25,0.86,10.3
+post_xhs_002,demo_xhs,示例账号（虚构）,xhs,一张图看懂账号数据复盘,https://example.invalid/demo/post_xhs_002,2026-11-03T12:15:00+08:00,image_text,复盘|数据,,复盘先看互动与收藏。,2026-11-09T10:00:00+08:00,5300,300,40,60,120,55,,
+post_xhs_003,demo_xhs,示例账号（虚构）,xhs,60 秒讲清选题到发布,https://example.invalid/demo/post_xhs_003,2026-11-04T19:30:00+08:00,video,选题|流程,75,长视频的完播率明显更低。,2026-11-09T10:00:00+08:00,4500,110,8,12,25,10,0.31,23.25
+post_xhs_004,demo_xhs,示例账号（虚构）,xhs,周报模板：三列就够,https://example.invalid/demo/post_xhs_004,2026-11-05T13:00:00+08:00,video,模板|效率,13,短模板更容易看完。,2026-11-09T10:00:00+08:00,5500,320,45,50,130,60,0.84,10.92
+post_xhs_005,demo_xhs,示例账号（虚构）,xhs,复盘先看哪三个数,https://example.invalid/demo/post_xhs_005,2026-11-06T09:15:00+08:00,image_text,复盘|指标,,先看中位数、互动率、收藏率。,2026-11-09T10:00:00+08:00,4900,200,18,22,50,28,,
+post_xhs_006,demo_xhs,示例账号（虚构）,xhs,把发布节奏固定下来,https://example.invalid/demo/post_xhs_006,2026-11-07T20:00:00+08:00,video,发布|节奏,28,固定节奏比追热点更稳。,2026-11-09T10:00:00+08:00,5100,125,10,14,28,12,0.52,14.56
+post_xhs_007,demo_xhs,示例账号（虚构）,xhs,15 秒讲完一个选题,https://example.invalid/demo/post_xhs_007,2026-11-08T12:40:00+08:00,video,选题|短视频,14,短时长适合讲单点。,2026-11-09T10:00:00+08:00,5700,330,38,55,140,65,0.88,12.32
+post_xhs_008,demo_xhs,示例账号（虚构）,xhs,账号复盘的长文模板,https://example.invalid/demo/post_xhs_008,2026-11-08T02:00:00+08:00,article,复盘|模板,,深夜发布的长文样本。,2026-11-09T10:00:00+08:00,500,4,0,0,1,1,,
+post_xhs_009,demo_xhs,示例账号（虚构）,xhs,数据不好时先查这三处,https://example.invalid/demo/post_xhs_009,2026-11-08T09:30:00+08:00,image_text,诊断|数据,,先查选题、封面、发布时间。,2026-11-09T10:00:00+08:00,5900,230,25,25,60,30,,
+post_xhs_010,demo_xhs,示例账号（虚构）,xhs,一周涨粉 45 的复盘,https://example.invalid/demo/post_xhs_010,2026-11-06T21:30:00+08:00,video,涨粉|复盘,22,本周 views 最高的一篇。,2026-11-09T10:00:00+08:00,11000,280,30,40,70,45,0.48,10.56
+post_xhs_011,demo_xhs,示例账号（虚构）,xhs,上周复盘：先把指标减半,https://example.invalid/demo/post_xhs_011,2026-10-27T12:00:00+08:00,image_text,复盘|效率,,历史样本，用于 P90。,2026-11-09T10:00:00+08:00,4200,210,20,30,80,40,,
+post_xhs_012,demo_xhs,示例账号（虚构）,xhs,发布节奏实验第一周,https://example.invalid/demo/post_xhs_012,2026-10-30T20:00:00+08:00,video,发布|实验,25,历史样本，用于 P90。,2026-11-09T10:00:00+08:00,3600,100,8,10,20,8,0.55,13.75
+post_xhs_013,demo_xhs,示例账号（虚构）,xhs,15 秒模板复用,https://example.invalid/demo/post_xhs_013,2026-10-21T09:00:00+08:00,video,模板|短视频,14,历史样本，用于 P90。,2026-11-09T10:00:00+08:00,3900,150,12,15,35,20,0.82,11.48
+post_xhs_014,demo_xhs,示例账号（虚构）,xhs,复盘表格的三种列,https://example.invalid/demo/post_xhs_014,2026-10-24T18:30:00+08:00,image_text,复盘|模板,,历史样本，用于 P90。,2026-11-09T10:00:00+08:00,3300,120,10,12,30,15,,
+post_bench_a_001,demo_xhs_bench_a,对标账号 A（虚构）,xhs,对标 A：复盘卡片拆解,https://example.invalid/demo/post_bench_a_001,2026-10-20T12:00:00+08:00,image_text,对标|复盘,,对标账号样例。,2026-11-09T10:00:00+08:00,7200,300,30,40,90,50,,
+post_bench_a_002,demo_xhs_bench_a,对标账号 A（虚构）,xhs,对标 A：30 秒讲流程,https://example.invalid/demo/post_bench_a_002,2026-10-23T19:00:00+08:00,video,对标|流程,30,对标账号样例。,2026-11-09T10:00:00+08:00,9800,350,40,60,120,55,0.6,18
+post_bench_a_003,demo_xhs_bench_a,对标账号 A（虚构）,xhs,对标 A：周报模板,https://example.invalid/demo/post_bench_a_003,2026-10-28T09:00:00+08:00,image_text,对标|模板,,对标账号样例。,2026-11-09T10:00:00+08:00,6100,260,22,35,70,42,,
+post_bench_a_004,demo_xhs_bench_a,对标账号 A（虚构）,xhs,对标 A：晚间发布实验,https://example.invalid/demo/post_bench_a_004,2026-10-31T21:00:00+08:00,video,对标|发布,18,对标账号样例。,2026-11-09T10:00:00+08:00,8600,310,28,45,95,48,0.7,12.6
+post_bench_a_005,demo_xhs_bench_a,对标账号 A（虚构）,xhs,对标 A：一周数据拆解,https://example.invalid/demo/post_bench_a_005,2026-11-03T12:00:00+08:00,image_text,对标|数据,,对标账号样例。,2026-11-09T10:00:00+08:00,12500,520,55,80,160,90,,
+post_bench_a_006,demo_xhs_bench_a,对标账号 A（虚构）,xhs,对标 A：45 秒长视频,https://example.invalid/demo/post_bench_a_006,2026-11-05T20:00:00+08:00,video,对标|视频,45,对标账号样例。,2026-11-09T10:00:00+08:00,15000,600,70,100,180,110,0.5,22.5
+post_bench_a_007,demo_xhs_bench_a,对标账号 A（虚构）,xhs,对标 A：12 秒快剪,https://example.invalid/demo/post_bench_a_007,2026-11-07T08:00:00+08:00,video,对标|短视频,12,对标账号样例。,2026-11-09T10:00:00+08:00,7000,280,25,40,85,45,0.82,9.84
+post_bench_a_008,demo_xhs_bench_a,对标账号 A（虚构）,xhs,对标 A：收藏率复盘,https://example.invalid/demo/post_bench_a_008,2026-11-08T18:00:00+08:00,image_text,对标|复盘,,对标账号样例。,2026-11-09T10:00:00+08:00,11000,450,48,70,140,80,,
+post_bench_b_001,demo_xhs_bench_b,对标账号 B（虚构）,xhs,对标 B：20 秒开头模板,https://example.invalid/demo/post_bench_b_001,2026-10-19T12:00:00+08:00,video,对标|模板,20,对标账号样例。,2026-11-09T10:00:00+08:00,20000,800,90,150,300,160,0.72,14.4
+post_bench_b_002,demo_xhs_bench_b,对标账号 B（虚构）,xhs,对标 B：复盘清单,https://example.invalid/demo/post_bench_b_002,2026-10-22T19:00:00+08:00,image_text,对标|复盘,,对标账号样例。,2026-11-09T10:00:00+08:00,18000,700,75,120,260,140,,
+post_bench_b_003,demo_xhs_bench_b,对标账号 B（虚构）,xhs,对标 B：15 秒爆款结构,https://example.invalid/demo/post_bench_b_003,2026-10-29T08:00:00+08:00,video,对标|短视频,15,对标账号样例。,2026-11-09T10:00:00+08:00,30000,1200,130,220,450,240,0.9,13.5
+post_bench_b_004,demo_xhs_bench_b,对标账号 B（虚构）,xhs,对标 B：晚间涨粉复盘,https://example.invalid/demo/post_bench_b_004,2026-11-01T21:00:00+08:00,image_text,对标|涨粉,,对标账号样例。,2026-11-09T10:00:00+08:00,26000,1000,110,180,380,200,,
+post_bench_b_005,demo_xhs_bench_b,对标账号 B（虚构）,xhs,对标 B：40 秒长视频,https://example.invalid/demo/post_bench_b_005,2026-11-02T12:00:00+08:00,video,对标|视频,40,对标账号样例。,2026-11-09T10:00:00+08:00,22000,900,95,160,320,170,0.55,22
+post_bench_b_006,demo_xhs_bench_b,对标账号 B（虚构）,xhs,对标 B：账号定位复盘,https://example.invalid/demo/post_bench_b_006,2026-11-04T19:00:00+08:00,image_text,对标|定位,,对标账号样例。,2026-11-09T10:00:00+08:00,32000,1300,140,240,480,260,,
+post_bench_b_007,demo_xhs_bench_b,对标账号 B（虚构）,xhs,对标 B：13 秒口播,https://example.invalid/demo/post_bench_b_007,2026-11-06T09:00:00+08:00,video,对标|短视频,13,对标账号样例。,2026-11-09T10:00:00+08:00,15000,620,60,100,200,100,0.85,11.05
+post_bench_b_008,demo_xhs_bench_b,对标账号 B（虚构）,xhs,对标 B：一周三条动作,https://example.invalid/demo/post_bench_b_008,2026-11-08T20:00:00+08:00,image_text,对标|复盘,,对标账号样例。,2026-11-09T10:00:00+08:00,28000,1100,120,200,400,220,,
