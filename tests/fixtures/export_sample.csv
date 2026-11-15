@@ -1,0 +1,4 @@
+url,platform,account,display_name,title,published_at,content_type,topic_tags,duration_sec,caption,captured_at,views,likes,comments,shares,saves,follows,completion_rate,avg_watch_sec
+https://example.invalid/demo/post_xhs_001,xhs,demo_xhs,示例账号（虚构）,3 个动作让周报不再堆指标,2026-11-02T08:30:00+08:00,video,复盘|效率,12,用三个动作替代堆指标。,2026-11-13T10:00:00+08:00,5200,210,25,26,52,30,0.87,10.4
+https://example.invalid/demo/post_xhs_002,xhs,demo_xhs,示例账号（虚构）,一张图看懂账号数据复盘,2026-11-03T12:15:00+08:00,image_text,复盘|数据,,复盘先看互动与收藏。,2026-11-13T10:00:00+08:00,5600,320,42,62,128,58,,
+https://example.invalid/demo/post_xhs_099,xhs,demo_xhs,示例账号（虚构）,新作品：把发布记录接回复盘,2026-11-12T19:00:00+08:00,video,流程|发布,30,发布后把 URL 与数据一起记回来。,2026-11-13T10:00:00+08:00,800,40,5,6,10,4,0.6,18
