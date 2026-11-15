@@ -15,9 +15,8 @@ from typer.testing import CliRunner
 from workbench.cli import app
 from workbench.config import Config
 from workbench.contracts import (
-    RenderSpec,
-    get_kb,
-    get_renderer,
+    get_composer,
+    get_publisher,
     get_source_adapters,
 )
 from workbench.errors import PipelineFailed, Unavailable
@@ -186,16 +185,18 @@ def test_runner_stage_exception_marks_job_failed(
 def test_null_adapters_degrade_without_crashing(
     cfg: Config, tmp_path: Path, caplog: pytest.LogCaptureFixture
 ) -> None:
+    # T05 实现 source adapters 后，这里改为覆盖仍未实现的 T07/T08 适配器。
     with caplog.at_level(logging.WARNING):
-        kb = get_kb(cfg)
-        assert kb.search("任意查询") == []
-        assert kb.add([]) == {}
-
-        renderer = get_renderer()
         with pytest.raises(Unavailable):
-            renderer.render(RenderSpec(kind="poster", out=tmp_path / "never.png"))
+            get_composer().compose(storyboard={}, out=tmp_path / "never.mp4")
+        with pytest.raises(Unavailable):
+            get_publisher().build(pack={}, out=tmp_path / "never.zip")
 
-        assert get_source_adapters(cfg) == []
+        assert [adapter.name for adapter in get_source_adapters(cfg)] == [
+            "hotlist",
+            "rss",
+            "local",
+        ]
 
     assert "退回 Null 实现" in caplog.text
 
