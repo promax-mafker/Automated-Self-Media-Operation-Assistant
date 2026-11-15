@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>知识库问答</h1>
+    <p class="muted">SQLite FTS5 + jieba 检索本地资料；返回命中片段与分数，不调用任何在线服务。</p>
+  </div>
+  <span class="count">{{ docs|length }} 篇 · {{ chunk_count }} 块</span>
+</section>
+
+<form class="ask-form" method="post" action="/kb/ask">
+  <input type="search" name="q" value="{{ query }}" placeholder="输入至少 2 个字，例如：周报 复盘" aria-label="知识库问题">
+  <button type="submit">检索</button>
+</form>
+
+{% if hint %}
+<div class="alert">{{ hint }}</div>
+{% endif %}
+
+{% if hits %}
+<section class="panel">
+  <div class="panel-head">
+    <h2>命中片段</h2>
+    <span class="count">{{ hits|length }} 条</span>
+  </div>
+  <ol class="hits">
+    {% for hit in hits %}
+    <li>
+      <div class="hit-head">
+        <strong>{{ hit.doc_title }}</strong>
+        {% if hit.heading %}<span class="muted">/ {{ hit.heading }}</span>{% endif %}
+        <span class="badge">score {{ "%.3f"|format(hit.score) }}</span>
+      </div>
+      <p>{{ hit.snippet }}</p>
+      <p class="mono sub">{{ hit.doc_id }} / {{ hit.chunk_id }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% elif asked %}
+<p class="empty-inline">没有可展示的命中。</p>
+{% endif %}
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>已导入资料</h2>
+    <span class="muted">用 <code>wb kb add &lt;路径&gt;</code> 导入</span>
+  </div>
+  {% if docs %}
+  <table class="table">
+    <thead><tr><th>标题</th><th>类型</th><th>更新时间</th></tr></thead>
+    <tbody>
+      {% for doc in docs %}
+      <tr><td>{{ doc.title }}</td><td><span class="badge">{{ doc.kind }}</span></td><td class="mono">{{ doc.updated_at }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>还没有知识库资料。</p>
+  <p>先跑 <code>wb run demo</code> 看完整链路，或 <code>wb kb add data/kb/seed</code> 导入本地资料。</p>
+  {% endif %}
+</section>
+{% endblock %}

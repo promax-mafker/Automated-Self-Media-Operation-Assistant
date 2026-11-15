@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>发布包</h1>
+    <p class="muted">发布包只导出与记录，不自动发布；状态 draft / exported 都算「待发布」，published 需要人工回填 URL。</p>
+  </div>
+  <span class="count">{{ packs|length }} 个</span>
+</section>
+
+{% if packs %}
+<table class="table">
+  <thead>
+    <tr><th>状态</th><th>平台</th><th>标题</th><th>创建时间</th><th>目录</th><th></th></tr>
+  </thead>
+  <tbody>
+    {% for pack in packs %}
+    <tr>
+      <td>
+        <span class="badge {% if pack.status == 'published' %}badge-ok{% endif %}">{{ pack.status }}</span>
+      </td>
+      <td>{{ pack.platform }}</td>
+      <td>
+        <div class="title">{{ pack.manifest.get('title') or pack.id }}</div>
+        <div class="mono sub">{{ pack.id }}</div>
+      </td>
+      <td class="mono">{{ pack.created_at }}</td>
+      <td class="mono">{{ pack.dir }}</td>
+      <td><a class="link" href="/packs?pack_id={{ pack.id }}">查看 manifest</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="empty">
+  <h2>还没有发布包</h2>
+  <p>先跑 <code>wb run demo</code> 看完整链路，或 <code>wb pack build --copy &lt;copy_set_id&gt;</code> 生成发布包。</p>
+  <p class="muted">发布包目录在 <code>WB_HOME/packs/&lt;pack_id&gt;/</code>，含文案、图片、视频与 manifest.json。</p>
+</div>
+{% endif %}
+
+{% if missing_selected %}
+<div class="alert">找不到发布包 {{ selected_id }}，可能已被删除。</div>
+{% endif %}
+
+{% if selected %}
+<section class="panel detail">
+  <div class="panel-head">
+    <h2>manifest · {{ selected.id }}</h2>
+    <span class="badge">{{ selected.status }}</span>
+  </div>
+  <p class="muted">
+    平台：{{ selected.platform }} · 目录：<span class="mono">{{ selected.dir }}</span>
+    {% if selected.manifest.get('published_url') %}
+    · 已发布：<span class="mono">{{ selected.manifest.get('published_url') }}</span>
+    {% endif %}
+  </p>
+  {% if selected.manifest.get('ai_generated') %}
+  <div class="alert">该发布包含 AI 生成内容，发布时请按平台要求显式标识。</div>
+  {% endif %}
+  <pre class="body manifest">{{ manifest_text }}</pre>
+</section>
+{% endif %}
+{% endblock %}
