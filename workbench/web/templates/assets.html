@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>素材</h1>
+    <p class="muted">海报 / 图文 / 视频都从 WB_HOME 读取；缩略图走 <code>/files/&lt;相对路径&gt;</code>，不暴露 WB_HOME 之外的文件。</p>
+  </div>
+  <span class="count">{{ total }} 个</span>
+</section>
+
+{% if rows %}
+<div class="asset-grid">
+  {% for row in rows %}
+  {% set asset = row.asset %}
+  <article class="asset-card">
+    <div class="asset-preview">
+      {% if row.url and asset.kind == 'video' %}
+      <video controls preload="metadata" src="{{ row.url }}"></video>
+      {% elif row.url %}
+      <img src="{{ row.url }}" alt="{{ asset.template or asset.kind }}" loading="lazy">
+      {% else %}
+      <div class="missing">文件缺失<br><span class="mono">{{ asset.path }}</span></div>
+      {% endif %}
+    </div>
+    <h3><span class="badge">{{ asset.kind }}</span> {{ asset.template or "" }}</h3>
+    <p class="muted">
+      {% if asset.width and asset.height %}{{ asset.width }}×{{ asset.height }}{% endif %}
+      {% if asset.duration_sec %} · {{ "%.1f"|format(asset.duration_sec) }}s{% endif %}
+      {% if asset.bytes %} · {{ asset.bytes|fmt_bytes }}{% endif %}
+    </p>
+    <p class="mono sub">{{ asset.path }}</p>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty">
+  <h2>还没有素材</h2>
+  <p>先跑 <code>wb run demo</code> 看完整链路，或 <code>wb run visual</code> / <code>wb run video</code> 生成海报与视频。</p>
+  <p class="muted">素材登记在 <code>asset</code> 表，文件路径相对 <code>WB_HOME</code>。</p>
+</div>
+{% endif %}
+{% endblock %}

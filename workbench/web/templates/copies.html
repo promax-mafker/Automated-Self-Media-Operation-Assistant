@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>文案</h1>
+    <p class="muted">五类 × 两长度；compliance 为「通过 / 未通过」徽标，点「查看全文」看正文与引用。</p>
+  </div>
+  <span class="count">{{ copies|length }} 条</span>
+</section>
+
+{% if copies %}
+<table class="table">
+  <thead>
+    <tr><th>类型</th><th>长度</th><th>标题</th><th>合规</th><th>模型</th><th>创建时间</th><th></th></tr>
+  </thead>
+  <tbody>
+    {% for copy in copies %}
+    {% set passed = copy.compliance.get('passed') %}
+    {% set needs_human = copy.compliance.get('needs_human') %}
+    <tr>
+      <td><span class="badge">{{ copy.kind }}</span></td>
+      <td>{{ copy.length }}</td>
+      <td>
+        <div class="title">{{ copy.title or copy.hook or "（无标题）" }}</div>
+        {% if copy.topic_id %}<div class="sub">选题：{{ topic_titles.get(copy.topic_id, copy.topic_id) }}</div>{% endif %}
+      </td>
+      <td>
+        {% if passed %}
+        <span class="badge badge-ok">通过</span>
+        {% elif passed is none %}
+        <span class="badge">未检查</span>
+        {% else %}
+        <span class="badge badge-bad">未通过</span>
+        {% endif %}
+        {% if needs_human %}<span class="badge badge-warn">需人工</span>{% endif %}
+      </td>
+      <td class="mono">{{ copy.model or "—" }}</td>
+      <td class="mono">{{ copy.created_at }}</td>
+      <td><a class="link" href="/copies?copy_id={{ copy.id }}">查看全文</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="empty">
+  <h2>还没有文案</h2>
+  <p>先跑 <code>wb run demo</code> 看完整链路，或 <code>wb copy gen --topic &lt;topic_id&gt;</code> 生成 10 条文案。</p>
+  <p class="muted">也可以去 <a href="/topics">选题池</a> 点「生成文案」。</p>
+</div>
+{% endif %}
+
+{% if missing_selected %}
+<div class="alert">找不到文案 {{ selected_id }}，可能已被删除。</div>
+{% endif %}
+
+{% if selected %}
+<section class="panel detail">
+  <div class="panel-head">
+    <h2>{{ selected.title or selected.hook or "（无标题）" }}</h2>
+    <span class="badge">{{ selected.kind }}/{{ selected.length }}</span>
+  </div>
+  <p class="muted mono">
+    id: {{ selected.id }} · model: {{ selected.model or "—" }} · prompt: {{ selected.prompt_version or "—" }}
+  </p>
+  {% if selected.hook %}<p><b>钩子：</b>{{ selected.hook }}</p>{% endif %}
+  <pre class="body">{{ selected.body }}</pre>
+  {% if selected.tags %}<p><b>标签：</b>{{ selected.tags|join(" / ") }}</p>{% endif %}
+  {% if selected.citations %}
+  <h3>引用</h3>
+  <ul class="citations">
+    {% for citation in selected.citations %}
+    <li>
+      <span class="mono">{{ citation.get('doc_id', '') }} / {{ citation.get('chunk_id', '') }}</span>
+      <div>{{ citation.get('quote') or citation.get('note') or "" }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="muted">没有知识库引用（stub 模式或知识库为空时正常）。</p>
+  {% endif %}
+  {% if selected.compliance.get('hits') %}
+  <h3>合规命中</h3>
+  <ul class="citations">
+    {% for hit in selected.compliance.get('hits') %}
+    <li><span class="badge badge-bad">{{ hit.get('kind', '') }}</span> {{ hit.get('word', '') }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</section>
+{% endif %}
+{% endblock %}

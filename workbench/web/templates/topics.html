@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>选题池</h1>
+    <p class="muted">按 score 降序；score 由 heat / fit / benchmark / timing 四项加权，evidence 是证据条目。</p>
+  </div>
+  <span class="count">{{ total }} 条</span>
+</section>
+
+{% if rows %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>分数</th><th>来源</th><th>状态</th><th>标题</th>
+      <th>证据</th><th>文案</th><th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      <td class="num">{{ "%.3f"|format(row.topic.score) }}</td>
+      <td><span class="badge">{{ row.topic.source }}</span></td>
+      <td>{{ row.topic.status }}</td>
+      <td>
+        <div class="title">{{ row.topic.title }}</div>
+        {% if row.topic.hook %}<div class="sub">{{ row.topic.hook }}</div>{% endif %}
+      </td>
+      <td class="num">{{ row.evidence }}</td>
+      <td class="num">{{ row.copies }}</td>
+      <td>
+        <form method="post" action="/topics/{{ row.topic.id }}/copy">
+          <button type="submit">生成文案</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="empty">
+  <h2>选题池还是空的</h2>
+  <p>先跑 <code>wb run demo</code> 看完整链路，或 <code>wb topic suggest</code> 从本地 fixture 生成选题卡。</p>
+  <p class="muted">「生成文案」按钮会同步跑 copy 流水线，因此可能需要几秒到几十秒（取决于模型模式）。</p>
+</div>
+{% endif %}
+{% endblock %}

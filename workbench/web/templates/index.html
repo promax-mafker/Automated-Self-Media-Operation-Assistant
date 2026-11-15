@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-head">
+  <div>
+    <h1>概览</h1>
+    <p class="muted">{{ week_label }} · 数据来自本地 store，未连接任何平台</p>
+  </div>
+</section>
+
+{% if not has_data %}
+<div class="empty">
+  <h2>还没有数据</h2>
+  <p>先跑 <code>wb run demo</code> 走一遍完整链路，再回到这个页面。</p>
+  <p class="muted">
+    也可以按单条流水线来：
+    <code>wb topic suggest</code> →
+    <code>wb copy gen --topic &lt;id&gt;</code> →
+    <code>wb pack build --copy &lt;id&gt;</code>
+  </p>
+</div>
+{% else %}
+<section class="stats">
+  <article class="stat">
+    <h3>本周发布数</h3>
+    <strong>{{ publish_count }}</strong>
+    <span>{{ week_key }}</span>
+  </article>
+  <article class="stat">
+    <h3>播放中位数</h3>
+    <strong>{{ median_views|fmt_int }}</strong>
+    <span>本周有指标的作品</span>
+  </article>
+  <article class="stat">
+    <h3>待发布包数</h3>
+    <strong>{{ pending_packs }}</strong>
+    <span>draft / exported，不代表已发布</span>
+  </article>
+  <article class="stat">
+    <h3>最近一次 job</h3>
+    <strong>{{ latest_job.status if latest_job else "—" }}</strong>
+    <span>
+      {% if latest_job %}{{ latest_job.pipeline }} / {{ latest_job.stage }}{% else %}暂无 job 记录{% endif %}
+    </span>
+  </article>
+</section>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>Top3 选题</h2>
+    <a class="link" href="/topics">全部选题 →</a>
+  </div>
+  {% if topics %}
+  <table class="table">
+    <thead>
+      <tr><th>分数</th><th>来源</th><th>状态</th><th>标题</th><th>证据</th></tr>
+    </thead>
+    <tbody>
+      {% for topic in topics %}
+      <tr>
+        <td class="num">{{ "%.3f"|format(topic.score) }}</td>
+        <td><span class="badge">{{ topic.source }}</span></td>
+        <td>{{ topic.status }}</td>
+        <td>{{ topic.title }}</td>
+        <td class="num">{{ topic.evidence|length }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty-inline">还没有选题；先跑 <code>wb topic suggest</code>。</p>
+  {% endif %}
+</section>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>库里现在有什么</h2>
+    <a class="link" href="/packs">发布包 →</a>
+  </div>
+  <ul class="counts">
+    <li><strong>{{ counts.topics }}</strong><span>选题</span></li>
+    <li><strong>{{ counts.copies }}</strong><span>文案</span></li>
+    <li><strong>{{ counts.assets }}</strong><span>素材</span></li>
+    <li><strong>{{ counts.packs }}</strong><span>发布包</span></li>
+    <li><strong>{{ counts.kb_docs }}</strong><span>知识库文档</span></li>
+    <li><strong>{{ counts.jobs }}</strong><span>job</span></li>
+  </ul>
+  <p class="muted">
+    下一步：在<b>选题池</b>点「生成文案」，去<b>素材</b>看海报/视频，
+    到<b>发布包</b>导出后人工发布，再用 <code>wb review import</code> 回灌数据。
+  </p>
+</section>
+{% endif %}
+{% endblock %}

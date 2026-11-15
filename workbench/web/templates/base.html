@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} · 超级个体获客工作台</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/">获客工作台</a>
+      <span class="tagline">本地 MVP · 单用户</span>
+    </div>
+    <nav class="nav" aria-label="主导航">
+      <a href="/" class="{% if page == 'index' %}active{% endif %}">概览</a>
+      <a href="/topics" class="{% if page == 'topics' %}active{% endif %}">选题池</a>
+      <a href="/copies" class="{% if page == 'copies' %}active{% endif %}">文案</a>
+      <a href="/assets" class="{% if page == 'assets' %}active{% endif %}">素材</a>
+      <a href="/packs" class="{% if page == 'packs' %}active{% endif %}">发布包</a>
+      <a href="/kb" class="{% if page == 'kb' %}active{% endif %}">知识库问答</a>
+    </nav>
+    <div class="home" title="WB_HOME 数据根目录">{{ home }}</div>
+  </header>
+
+  <main class="wrap">
+    {% if error %}
+    <div class="alert alert-error" role="alert">{{ error }}</div>
+    {% endif %}
+    {% if notice %}
+    <div class="alert" role="status">{{ notice }}</div>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <span>只读本地 store · 不抓取、不登录、不自动发布 · 发布由人完成</span>
+    <span>数据是本地 fixture 或你自己导入的导出文件</span>
+  </footer>
+</body>
+</html>
