@@ -1,0 +1,73 @@
+{
+  "id": "poster-checklist",
+  "label": "清单式干货海报",
+  "kind": "poster",
+  "canvas": {
+    "width": 1080,
+    "height": 1440,
+    "background": "#F7F7F7",
+    "pad": 72
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "slot": "title",
+      "x": 72,
+      "y": 110,
+      "size": 76,
+      "weight": "bold",
+      "color": "#1F1F1F",
+      "max_width": 936,
+      "max_lines": 2,
+      "line_height": 104,
+      "align": "left"
+    },
+    {
+      "type": "divider",
+      "x": 72,
+      "y": 352,
+      "width": 96,
+      "thickness": 8,
+      "color": "#FF5A36"
+    },
+    {
+      "type": "panel",
+      "x": 72,
+      "y": 408,
+      "width": 936,
+      "height": 780,
+      "fill": "#FFFFFF",
+      "radius": 32,
+      "stroke": "#E8E8E8",
+      "stroke_width": 2
+    },
+    {
+      "type": "list",
+      "slot": "points",
+      "x": 112,
+      "y": 456,
+      "size": 36,
+      "weight": "regular",
+      "color": "#1F1F1F",
+      "max_width": 856,
+      "max_lines": 7,
+      "line_height": 64,
+      "item_gap": 24,
+      "bullet": "•",
+      "align": "left"
+    },
+    {
+      "type": "text",
+      "slot": "footer",
+      "x": 72,
+      "y": 1250,
+      "size": 28,
+      "weight": "regular",
+      "color": "#8C8C8C",
+      "max_width": 936,
+      "max_lines": 1,
+      "line_height": 44,
+      "align": "left"
+    }
+  ]
+}

@@ -1,0 +1,709 @@
+{
+  "id": "xhs-nine",
+  "label": "小红书九图",
+  "kind": "carousel",
+  "canvas": {
+    "width": 1080,
+    "height": 1440,
+    "background": "#FFF7F0",
+    "pad": 72
+  },
+  "pages": [
+    {
+      "name": "封面",
+      "blocks": [
+        {
+          "type": "chips",
+          "slot": "tags",
+          "x": 72,
+          "y": 96,
+          "size": 28,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "background": "#FFC53D",
+          "max_width": 936,
+          "max_rows": 1,
+          "gap": 16,
+          "padding": 12,
+          "radius": 999,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 210,
+          "size": 88,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 3,
+          "line_height": 118,
+          "align": "left"
+        },
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 620,
+          "width": 120,
+          "thickness": 8,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "subtitle",
+          "x": 72,
+          "y": 676,
+          "size": 38,
+          "weight": "regular",
+          "color": "#6B6B6B",
+          "max_width": 880,
+          "max_lines": 4,
+          "line_height": 60,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 1250,
+          "size": 28,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "内容 1",
+      "blocks": [
+        {
+          "type": "text",
+          "slot": "kicker",
+          "x": 72,
+          "y": 96,
+          "size": 28,
+          "weight": "bold",
+          "color": "#FF5A36",
+          "max_width": 600,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        },
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 168,
+          "width": 72,
+          "thickness": 6,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 216,
+          "size": 60,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 84,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "body",
+          "x": 72,
+          "y": 432,
+          "size": 34,
+          "weight": "regular",
+          "color": "#4A4A4A",
+          "max_width": 936,
+          "max_lines": 5,
+          "line_height": 58,
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "slot": "points",
+          "x": 72,
+          "y": 790,
+          "size": 32,
+          "weight": "regular",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 4,
+          "line_height": 56,
+          "item_gap": 20,
+          "bullet": "·",
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 1270,
+          "size": 24,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 38,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "内容 2",
+      "blocks": [
+        {
+          "type": "text",
+          "slot": "kicker",
+          "x": 72,
+          "y": 96,
+          "size": 28,
+          "weight": "bold",
+          "color": "#FF5A36",
+          "max_width": 600,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        },
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 168,
+          "width": 72,
+          "thickness": 6,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 216,
+          "size": 60,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 84,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "body",
+          "x": 72,
+          "y": 432,
+          "size": 34,
+          "weight": "regular",
+          "color": "#4A4A4A",
+          "max_width": 936,
+          "max_lines": 5,
+          "line_height": 58,
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "slot": "points",
+          "x": 72,
+          "y": 790,
+          "size": 32,
+          "weight": "regular",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 4,
+          "line_height": 56,
+          "item_gap": 20,
+          "bullet": "·",
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 1270,
+          "size": 24,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 38,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "内容 3",
+      "blocks": [
+        {
+          "type": "text",
+          "slot": "kicker",
+          "x": 72,
+          "y": 96,
+          "size": 28,
+          "weight": "bold",
+          "color": "#FF5A36",
+          "max_width": 600,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        },
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 168,
+          "width": 72,
+          "thickness": 6,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 216,
+          "size": 60,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 84,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "body",
+          "x": 72,
+          "y": 432,
+          "size": 34,
+          "weight": "regular",
+          "color": "#4A4A4A",
+          "max_width": 936,
+          "max_lines": 5,
+          "line_height": 58,
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "slot": "points",
+          "x": 72,
+          "y": 790,
+          "size": 32,
+          "weight": "regular",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 4,
+          "line_height": 56,
+          "item_gap": 20,
+          "bullet": "·",
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 1270,
+          "size": 24,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 38,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "内容 4",
+      "blocks": [
+        {
+          "type": "text",
+          "slot": "kicker",
+          "x": 72,
+          "y": 96,
+          "size": 28,
+          "weight": "bold",
+          "color": "#FF5A36",
+          "max_width": 600,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        },
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 168,
+          "width": 72,
+          "thickness": 6,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 216,
+          "size": 60,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 84,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "body",
+          "x": 72,
+          "y": 432,
+          "size": 34,
+          "weight": "regular",
+          "color": "#4A4A4A",
+          "max_width": 936,
+          "max_lines": 5,
+          "line_height": 58,
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "slot": "points",
+          "x": 72,
+          "y": 790,
+          "size": 32,
+          "weight": "regular",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 4,
+          "line_height": 56,
+          "item_gap": 20,
+          "bullet": "·",
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 1270,
+          "size": 24,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 38,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "内容 5",
+      "blocks": [
+        {
+          "type": "text",
+          "slot": "kicker",
+          "x": 72,
+          "y": 96,
+          "size": 28,
+          "weight": "bold",
+          "color": "#FF5A36",
+          "max_width": 600,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        },
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 168,
+          "width": 72,
+          "thickness": 6,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 216,
+          "size": 60,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 84,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "body",
+          "x": 72,
+          "y": 432,
+          "size": 34,
+          "weight": "regular",
+          "color": "#4A4A4A",
+          "max_width": 936,
+          "max_lines": 5,
+          "line_height": 58,
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "slot": "points",
+          "x": 72,
+          "y": 790,
+          "size": 32,
+          "weight": "regular",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 4,
+          "line_height": 56,
+          "item_gap": 20,
+          "bullet": "·",
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 1270,
+          "size": 24,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 38,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "内容 6",
+      "blocks": [
+        {
+          "type": "text",
+          "slot": "kicker",
+          "x": 72,
+          "y": 96,
+          "size": 28,
+          "weight": "bold",
+          "color": "#FF5A36",
+          "max_width": 600,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        },
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 168,
+          "width": 72,
+          "thickness": 6,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 216,
+          "size": 60,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 84,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "body",
+          "x": 72,
+          "y": 432,
+          "size": 34,
+          "weight": "regular",
+          "color": "#4A4A4A",
+          "max_width": 936,
+          "max_lines": 5,
+          "line_height": 58,
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "slot": "points",
+          "x": 72,
+          "y": 790,
+          "size": 32,
+          "weight": "regular",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 4,
+          "line_height": 56,
+          "item_gap": 20,
+          "bullet": "·",
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 1270,
+          "size": 24,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 38,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "内容 7",
+      "blocks": [
+        {
+          "type": "text",
+          "slot": "kicker",
+          "x": 72,
+          "y": 96,
+          "size": 28,
+          "weight": "bold",
+          "color": "#FF5A36",
+          "max_width": 600,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        },
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 168,
+          "width": 72,
+          "thickness": 6,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 216,
+          "size": 60,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 84,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "body",
+          "x": 72,
+          "y": 432,
+          "size": 34,
+          "weight": "regular",
+          "color": "#4A4A4A",
+          "max_width": 936,
+          "max_lines": 5,
+          "line_height": 58,
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "slot": "points",
+          "x": 72,
+          "y": 790,
+          "size": 32,
+          "weight": "regular",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 4,
+          "line_height": 56,
+          "item_gap": 20,
+          "bullet": "·",
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 1270,
+          "size": 24,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 38,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "name": "结尾",
+      "blocks": [
+        {
+          "type": "divider",
+          "x": 72,
+          "y": 120,
+          "width": 120,
+          "thickness": 8,
+          "color": "#FF5A36"
+        },
+        {
+          "type": "text",
+          "slot": "title",
+          "x": 72,
+          "y": 180,
+          "size": 84,
+          "weight": "bold",
+          "color": "#1F1F1F",
+          "max_width": 936,
+          "max_lines": 2,
+          "line_height": 112,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "subtitle",
+          "x": 72,
+          "y": 460,
+          "size": 38,
+          "weight": "regular",
+          "color": "#6B6B6B",
+          "max_width": 880,
+          "max_lines": 3,
+          "line_height": 60,
+          "align": "left"
+        },
+        {
+          "type": "chips",
+          "slot": "tags",
+          "x": 72,
+          "y": 720,
+          "size": 26,
+          "weight": "regular",
+          "color": "#FFFFFF",
+          "background": "#1F1F1F",
+          "max_width": 936,
+          "max_rows": 1,
+          "gap": 12,
+          "padding": 10,
+          "radius": 999,
+          "align": "left"
+        },
+        {
+          "type": "text",
+          "slot": "footer",
+          "x": 72,
+          "y": 1250,
+          "size": 28,
+          "weight": "regular",
+          "color": "#8C8C8C",
+          "max_width": 936,
+          "max_lines": 1,
+          "line_height": 44,
+          "align": "left"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "poster-hero",
+  "label": "深色主视觉海报",
+  "kind": "poster",
+  "canvas": {
+    "width": 1080,
+    "height": 1440,
+    "background": "#101820",
+    "pad": 72
+  },
+  "blocks": [
+    {
+      "type": "chips",
+      "slot": "tags",
+      "x": 72,
+      "y": 96,
+      "size": 28,
+      "weight": "bold",
+      "color": "#101820",
+      "background": "#FFC53D",
+      "max_width": 936,
+      "max_rows": 1,
+      "gap": 16,
+      "padding": 12,
+      "radius": 999,
+      "align": "left"
+    },
+    {
+      "type": "divider",
+      "x": 72,
+      "y": 172,
+      "width": 96,
+      "thickness": 8,
+      "color": "#FF5A36"
+    },
+    {
+      "type": "text",
+      "slot": "title",
+      "x": 72,
+      "y": 216,
+      "size": 96,
+      "weight": "bold",
+      "color": "#FFFFFF",
+      "max_width": 936,
+      "max_lines": 3,
+      "line_height": 128,
+      "align": "left"
+    },
+    {
+      "type": "text",
+      "slot": "subtitle",
+      "x": 72,
+      "y": 648,
+      "size": 40,
+      "weight": "regular",
+      "color": "#D9D9D9",
+      "max_width": 936,
+      "max_lines": 4,
+      "line_height": 64,
+      "align": "left"
+    },
+    {
+      "type": "text",
+      "slot": "body",
+      "x": 72,
+      "y": 952,
+      "size": 32,
+      "weight": "regular",
+      "color": "#B0B0B0",
+      "max_width": 780,
+      "max_lines": 4,
+      "line_height": 52,
+      "align": "left"
+    },
+    {
+      "type": "text",
+      "slot": "footer",
+      "x": 72,
+      "y": 1250,
+      "size": 28,
+      "weight": "regular",
+      "color": "#8C8C8C",
+      "max_width": 936,
+      "max_lines": 1,
+      "line_height": 44,
+      "align": "left"
+    }
+  ]
+}

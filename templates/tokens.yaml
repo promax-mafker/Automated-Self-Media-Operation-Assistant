@@ -1,0 +1,35 @@
+{
+  "placeholder": "「待补充」",
+  "colors": {
+    "ink": "#1F1F1F",
+    "muted": "#8C8C8C",
+    "line": "#E5E5E5",
+    "bg": "#FFFFFF",
+    "brand": "#FF5A36",
+    "on_brand": "#FFFFFF",
+    "panel": "#F7F7F7"
+  },
+  "font": {
+    "sizes": {
+      "display": 96,
+      "title": 64,
+      "heading": 48,
+      "body": 32,
+      "caption": 24,
+      "micro": 20
+    },
+    "line_height_ratio": 1.5
+  },
+  "spacing": {
+    "pad": 72,
+    "gap_s": 16,
+    "gap_m": 32,
+    "gap_l": 56,
+    "safe_margin": 72
+  },
+  "radius": {
+    "panel": 32,
+    "chip": 999,
+    "image": 24
+  }
+}

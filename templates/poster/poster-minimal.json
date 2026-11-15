@@ -1,0 +1,76 @@
+{
+  "id": "poster-minimal",
+  "label": "极简方形海报",
+  "kind": "poster",
+  "canvas": {
+    "width": 1080,
+    "height": 1080,
+    "background": "#FFFFFF",
+    "pad": 72
+  },
+  "blocks": [
+    {
+      "type": "divider",
+      "x": 72,
+      "y": 140,
+      "width": 120,
+      "thickness": 8,
+      "color": "#FF5A36"
+    },
+    {
+      "type": "text",
+      "slot": "title",
+      "x": 72,
+      "y": 200,
+      "size": 88,
+      "weight": "bold",
+      "color": "#1F1F1F",
+      "max_width": 936,
+      "max_lines": 3,
+      "line_height": 120,
+      "align": "left"
+    },
+    {
+      "type": "text",
+      "slot": "subtitle",
+      "x": 72,
+      "y": 620,
+      "size": 36,
+      "weight": "regular",
+      "color": "#8C8C8C",
+      "max_width": 800,
+      "max_lines": 3,
+      "line_height": 56,
+      "align": "left"
+    },
+    {
+      "type": "chips",
+      "slot": "tags",
+      "x": 72,
+      "y": 860,
+      "size": 24,
+      "weight": "regular",
+      "color": "#FFFFFF",
+      "background": "#1F1F1F",
+      "max_width": 936,
+      "max_rows": 1,
+      "gap": 12,
+      "padding": 10,
+      "radius": 999,
+      "align": "left"
+    },
+    {
+      "type": "text",
+      "slot": "footer",
+      "x": 72,
+      "y": 952,
+      "size": 24,
+      "weight": "regular",
+      "color": "#8C8C8C",
+      "max_width": 936,
+      "max_lines": 1,
+      "line_height": 36,
+      "align": "left"
+    }
+  ]
+}
