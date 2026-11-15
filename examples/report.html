@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>样例周报 · 超级个体获客工作台</title>
+<meta name="description" content="demo 跑出的账号周报：10 项指标、分组对比、Top5/Bottom5、三条带数字的下周动作。数据全部虚构。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0B0F'/%3E%3Crect x='7' y='9' width='18' height='3' rx='1.5' fill='%23FF5A36'/%3E%3Crect x='7' y='15' width='12' height='3' rx='1.5' fill='%23F5C451'/%3E%3Crect x='7' y='21' width='8' height='3' rx='1.5' fill='%23EDEDF2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="site examples">
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>获客工作台</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="../index.html#capability">能力</a>
+      <a href="../index.html#pipeline">流水线</a>
+      <a href="../console/index.html">在线 demo</a>
+      <a href="../index.html#start">上手</a>
+      <a class="nav-cta" href="https://github.com/promax-mafker/Automated-Self-Media-Operation-Assistant">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <p class="kicker">样例产物 · 由 <code>wb review week</code> 生成 · 数据全部虚构</p>
+  <div class="report">
+<h1>账号周报 · demo_xhs · 2026-W46</h1>
+<blockquote>
+<p>数据来源：本地 <code>metric</code> 表（平台导出 CSV 导入）。时区：<code>Asia/Shanghai</code>。</p>
+</blockquote>
+<h2>概览</h2>
+<ul>
+<li>账号：demo_xhs（示例账号（虚构））</li>
+<li>平台：xhs</li>
+<li>周：2026-W46（2026-11-09 ~ 2026-11-15）</li>
+<li>发布量：10 篇</li>
+<li>总 views：53,100</li>
+<li>异常作品：2 篇（|z-score| ≥ 2）</li>
+<li>历史样本：14 篇（用于计算 P90 与爆款率）</li>
+<li>缺指标作品：0 篇（未计入）</li>
+</ul>
+<h2>指标表</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>本周数值</th>
+<th>口径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>发布量</td>
+<td>10 篇</td>
+<td>本周发布的作品数</td>
+</tr>
+<tr>
+<td>views 中位数</td>
+<td>5,200</td>
+<td>本周作品 views 的中位数</td>
+</tr>
+<tr>
+<td>views P90（本周）</td>
+<td>6,410</td>
+<td>本周作品 views 的 P90（线性插值）</td>
+</tr>
+<tr>
+<td>interaction_rate 均值</td>
+<td>5.89%</td>
+<td>(likes+comments+saves+shares)/views，先按作品算再平均</td>
+</tr>
+<tr>
+<td>save_rate 均值</td>
+<td>1.20%</td>
+<td>saves/views，先按作品算再平均</td>
+</tr>
+<tr>
+<td>follow_rate 均值</td>
+<td>0.59%</td>
+<td>follows/views，先按作品算再平均</td>
+</tr>
+<tr>
+<td>completion_rate 均值</td>
+<td>64.83%</td>
+<td>完播率均值；缺失时用 avg_watch_sec/duration_sec 估算</td>
+</tr>
+<tr>
+<td>burst_ratio 均值</td>
+<td>0.91</td>
+<td>views/P90(同账号历史)，先按作品算再平均</td>
+</tr>
+<tr>
+<td>publish_gap 中位数</td>
+<td>17.50 小时</td>
+<td>本周相邻作品发布时间间隔的中位数</td>
+</tr>
+<tr>
+<td>异常作品数</td>
+<td>2 篇</td>
+<td>views 的 z-score ≥ 2 或 ≤ -2（总体标准差）</td>
+</tr>
+</tbody>
+</table></div>
+<h2>分组对比</h2>
+<h3>按内容类型</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>分组</th>
+<th>样本量</th>
+<th>views 中位数</th>
+<th>interaction_rate 均值</th>
+<th>save_rate 均值</th>
+<th>completion_rate 均值</th>
+<th>burst_ratio 均值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图文</td>
+<td>3</td>
+<td>5,300</td>
+<td>7.16%</td>
+<td>1.43%</td>
+<td>—</td>
+<td>0.92</td>
+<td></td>
+</tr>
+<tr>
+<td>视频</td>
+<td>6</td>
+<td>5,300</td>
+<td>6.06%</td>
+<td>1.25%</td>
+<td>64.83%</td>
+<td>1.04</td>
+<td></td>
+</tr>
+<tr>
+<td>文章</td>
+<td>1</td>
+<td>500</td>
+<td>1.00%</td>
+<td>0.20%</td>
+<td>—</td>
+<td>0.09</td>
+<td>样本不足</td>
+</tr>
+</tbody>
+</table></div>
+<h3>按发布时段</h3>
+<p>早 = 06:00–11:59，午 = 12:00–17:59，晚 = 18:00–23:59，深夜 = 00:00–05:59。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>分组</th>
+<th>样本量</th>
+<th>views 中位数</th>
+<th>interaction_rate 均值</th>
+<th>save_rate 均值</th>
+<th>completion_rate 均值</th>
+<th>burst_ratio 均值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>早</td>
+<td>3</td>
+<td>4,900</td>
+<td>5.84%</td>
+<td>1.00%</td>
+<td>86.00%</td>
+<td>0.88</td>
+<td></td>
+</tr>
+<tr>
+<td>午</td>
+<td>3</td>
+<td>5,500</td>
+<td>9.87%</td>
+<td>2.36%</td>
+<td>86.00%</td>
+<td>0.94</td>
+<td></td>
+</tr>
+<tr>
+<td>晚</td>
+<td>3</td>
+<td>5,100</td>
+<td>3.58%</td>
+<td>0.58%</td>
+<td>43.67%</td>
+<td>1.18</td>
+<td></td>
+</tr>
+<tr>
+<td>深夜</td>
+<td>1</td>
+<td>500</td>
+<td>1.00%</td>
+<td>0.20%</td>
+<td>—</td>
+<td>0.09</td>
+<td>样本不足</td>
+</tr>
+</tbody>
+</table></div>
+<h3>按时长</h3>
+<p>≤15s = 0–15 秒，15–30s = 15–30 秒（不含 15），30–60s = 30–60 秒（不含 30），&gt;60s = 超过 60 秒；图文与文章计入「无时长」。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>分组</th>
+<th>样本量</th>
+<th>views 中位数</th>
+<th>interaction_rate 均值</th>
+<th>save_rate 均值</th>
+<th>completion_rate 均值</th>
+<th>burst_ratio 均值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>≤15s</td>
+<td>3</td>
+<td>5,500</td>
+<td>8.55%</td>
+<td>1.93%</td>
+<td>86.00%</td>
+<td>0.91</td>
+<td></td>
+</tr>
+<tr>
+<td>15–30s</td>
+<td>2</td>
+<td>8,050</td>
+<td>3.64%</td>
+<td>0.59%</td>
+<td>50.00%</td>
+<td>1.38</td>
+<td>样本不足</td>
+</tr>
+<tr>
+<td>30–60s</td>
+<td>0</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>样本不足</td>
+</tr>
+<tr>
+<td>&gt;60s</td>
+<td>1</td>
+<td>4,500</td>
+<td>3.44%</td>
+<td>0.56%</td>
+<td>31.00%</td>
+<td>0.77</td>
+<td>样本不足</td>
+</tr>
+<tr>
+<td>无时长</td>
+<td>4</td>
+<td>5,100</td>
+<td>5.62%</td>
+<td>1.13%</td>
+<td>—</td>
+<td>0.71</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2>Top5 与 Bottom5</h2>
+<h3>Top5（按 views 降序）</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>作品 ID</th>
+<th>标题</th>
+<th>发布时段</th>
+<th>views</th>
+<th>interaction_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>post_xhs_010</td>
+<td>一周涨粉 45 的复盘</td>
+<td>晚</td>
+<td>11,000</td>
+<td>3.82%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>post_xhs_009</td>
+<td>数据不好时先查这三处</td>
+<td>早</td>
+<td>5,900</td>
+<td>5.76%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>post_xhs_007</td>
+<td>15 秒讲完一个选题</td>
+<td>午</td>
+<td>5,700</td>
+<td>9.88%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>post_xhs_004</td>
+<td>周报模板：三列就够</td>
+<td>午</td>
+<td>5,500</td>
+<td>9.91%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>post_xhs_002</td>
+<td>一张图看懂账号数据复盘</td>
+<td>午</td>
+<td>5,300</td>
+<td>9.81%</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Bottom5（按 views 升序）</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>作品 ID</th>
+<th>标题</th>
+<th>发布时段</th>
+<th>views</th>
+<th>interaction_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>post_xhs_008</td>
+<td>账号复盘的长文模板</td>
+<td>深夜</td>
+<td>500</td>
+<td>1.00%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>post_xhs_003</td>
+<td>60 秒讲清选题到发布</td>
+<td>晚</td>
+<td>4,500</td>
+<td>3.44%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>post_xhs_001</td>
+<td>3 个动作让周报不再堆指标</td>
+<td>早</td>
+<td>4,700</td>
+<td>5.85%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>post_xhs_005</td>
+<td>复盘先看哪三个数</td>
+<td>早</td>
+<td>4,900</td>
+<td>5.92%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>post_xhs_006</td>
+<td>把发布节奏固定下来</td>
+<td>晚</td>
+<td>5,100</td>
+<td>3.47%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>下周三条动作</h2>
+<ol>
+<li>把下周 3 篇内容的发布时段从「晚」移到「午」：午时段 3 篇平均 interaction_rate 9.87%，晚时段 3 篇仅 3.58%，相差 6.29 个百分点。</li>
+<li>把下周 3 条视频统一到「≤15s」：该组 3 条平均 completion_rate 86.00%，比本周均值 64.83% 高 21.17 个百分点。</li>
+<li>复刻 post_xhs_010 的选题结构：views 11,000，爆款率 1.88（为账号历史 P90 的 1.88 倍），下周产出 1 篇同结构内容。</li>
+</ol>
+  </div>
+
+  <p class="hint" style="margin-top:48px">
+    想自己跑一份：导入平台导出的 CSV 后执行
+    <code>wb review week --account &lt;handle&gt; --week 2026-W45 --out out/review</code>。
+    指标口径见仓库 <code>docs/metrics.md</code>。
+  </p>
+</main>
+
+<footer class="site-footer footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-title">超级个体获客工作台</p>
+      <p class="footer-note">
+        本页是 <code>bash scripts/demo.sh</code> 的静态快照，由 <code>site/build.py</code> 生成。<br>
+        演示账号与数字均为虚构，不代表任何真实账号表现。
+      </p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../index.html">首页</a></li>
+      <li><a href="../console/index.html">控制台快照</a></li>
+      <li><a href="https://github.com/promax-mafker/Automated-Self-Media-Operation-Assistant/blob/main/docs/metrics.md">指标口径</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

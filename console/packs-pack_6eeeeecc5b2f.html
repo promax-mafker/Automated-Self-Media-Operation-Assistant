@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>发布包 · 超级个体获客工作台</title>
+<link href="../assets/console.css" rel="stylesheet"/>
+<link href="../assets/site.css" rel="stylesheet"/></head>
+<body><div class="snapshot-note"><strong>静态快照</strong> · 这些页面由本地 demo 数据预渲染，只读；「生成文案」「知识库问答」等写操作需要在本地运行 <code>wb</code> 命令。</div>
+<header class="topbar">
+<div class="brand">
+<a href="index.html">获客工作台</a>
+<span class="tagline">本地 MVP · 单用户</span>
+</div>
+<nav aria-label="主导航" class="nav">
+<a class="" href="index.html">概览</a>
+<a class="" href="topics.html">选题池</a>
+<a class="" href="copies.html">文案</a>
+<a class="" href="assets.html">素材</a>
+<a class="active" href="packs.html">发布包</a>
+<a class="" href="kb.html">知识库问答</a>
+</nav>
+<div class="home" title="WB_HOME 数据根目录">demo 数据根目录</div>
+</header>
+<main class="wrap">
+<section class="page-head">
+<div>
+<h1>发布包</h1>
+<p class="muted">发布包只导出与记录，不自动发布；状态 draft / exported 都算「待发布」，published 需要人工回填 URL。</p>
+</div>
+<span class="count">1 个</span>
+</section>
+<table class="table">
+<thead>
+<tr><th>状态</th><th>平台</th><th>标题</th><th>创建时间</th><th>目录</th><th></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<span class="badge">exported</span>
+</td>
+<td>xhs</td>
+<td>
+<div class="title">【stub】title</div>
+<div class="mono sub">pack_6eeeeecc5b2f</div>
+</td>
+<td class="mono">2026-11-15T23:02:59+08:00</td>
+<td class="mono">packs/pack_6eeeeecc5b2f</td>
+<td><a class="link" href="packs-pack_6eeeeecc5b2f.html">查看 manifest</a></td>
+</tr>
+</tbody>
+</table>
+<section class="panel detail">
+<div class="panel-head">
+<h2>manifest · pack_6eeeeecc5b2f</h2>
+<span class="badge">exported</span>
+</div>
+<p class="muted">
+    平台：xhs · 目录：<span class="mono">packs/pack_6eeeeecc5b2f</span>
+</p>
+<div class="alert">该发布包含 AI 生成内容，发布时请按平台要求显式标识。</div>
+<pre class="body manifest">{
+  "pack_id": "pack_6eeeeecc5b2f",
+  "platform": "xhs",
+  "copy_set_id": "copy_c00bb15232bc",
+  "title": "【stub】title",
+  "body": "【stub】body",
+  "tags": [
+    "【stub】tags"
+  ],
+  "assets": [
+    {
+      "id": "asset_96f624f465c6",
+      "path": "图片/01.png",
+      "width": 1080,
+      "height": 1440,
+      "duration_sec": null,
+      "source_path": "artifacts/visual/assets/poster-checklist.png",
+      "kind": "poster"
+    },
+    {
+      "id": "asset_d8efe78fc368",
+      "path": "视频/video.mp4",
+      "width": 1080,
+      "height": 1920,
+      "duration_sec": 17.0,
+      "source_path": "artifacts/video/assets/video.mp4",
+      "kind": "video"
+    }
+  ],
+  "ai_generated": true,
+  "compliance": {
+    "passed": true,
+    "hits": []
+  },
+  "suggested_publish_at": "2026-11-22T19:00:00+08:00",
+  "suggested_publish_reason": "基于 75 篇同平台作品的最新指标：周日 / 晚 的 interaction_rate 均值 9.85% 最高（该组 6 篇，≥3 篇才采纳）",
+  "suggested_publish_default": false,
+  "created_at": "2026-11-15T23:02:59+08:00",
+  "checksums": {
+    "发布说明.md": "387d9f2a0bcdcd441fc193d9d4577a3c100a5ffd4f3b39ceb30b57aba7e41816",
+    "图片/01.png": "ecdb87e7bc2bcdb5a9325c49f261986cad5901895f6a82222363fcb10b0b4ae7",
+    "文案.md": "b7d2d719b662aa508b8f3c26eff58ffbdb3b6cac187a57e789f6c95797c0d4dd",
+    "视频/video.mp4": "2bc80292bdbe45c672d1b7543c040fae4c235a512e99ad9fc68a7994d4ad6323"
+  }
+}</pre>
+</section>
+</main>
+<footer class="footer">
+<span>只读本地 store · 不抓取、不登录、不自动发布 · 发布由人完成</span>
+<span>数据是本地 fixture 或你自己导入的导出文件</span>
+</footer>
+</body>
+</html>

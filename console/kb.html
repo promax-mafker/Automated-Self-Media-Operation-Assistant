@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>知识库问答 · 超级个体获客工作台</title>
+<link href="../assets/console.css" rel="stylesheet"/>
+<link href="../assets/site.css" rel="stylesheet"/></head>
+<body><div class="snapshot-note"><strong>静态快照</strong> · 这些页面由本地 demo 数据预渲染，只读；「生成文案」「知识库问答」等写操作需要在本地运行 <code>wb</code> 命令。</div><p class="page-note">快照里的检索是预渲染结果；问答输入框在本地才会真正调用 FTS5 索引。</p>
+<header class="topbar">
+<div class="brand">
+<a href="index.html">获客工作台</a>
+<span class="tagline">本地 MVP · 单用户</span>
+</div>
+<nav aria-label="主导航" class="nav">
+<a class="" href="index.html">概览</a>
+<a class="" href="topics.html">选题池</a>
+<a class="" href="copies.html">文案</a>
+<a class="" href="assets.html">素材</a>
+<a class="" href="packs.html">发布包</a>
+<a class="active" href="kb.html">知识库问答</a>
+</nav>
+<div class="home" title="WB_HOME 数据根目录">demo 数据根目录</div>
+</header>
+<main class="wrap">
+<section class="page-head">
+<div>
+<h1>知识库问答</h1>
+<p class="muted">SQLite FTS5 + jieba 检索本地资料；返回命中片段与分数，不调用任何在线服务。</p>
+</div>
+<span class="count">7 篇 · 21 块</span>
+</section>
+<form action="#" class="ask-form disabled-form" method="post" onsubmit="return false"><p class="form-note">静态快照：表单已禁用，请本地运行命令。</p>
+<input aria-label="知识库问题" name="q" placeholder="输入至少 2 个字，例如：周报 复盘" type="search" value=""/>
+<button type="submit">检索</button>
+</form>
+<section class="panel">
+<div class="panel-head">
+<h2>已导入资料</h2>
+<span class="muted">用 <code>wb kb add &lt;路径&gt;</code> 导入</span>
+</div>
+<table class="table">
+<thead><tr><th>标题</th><th>类型</th><th>更新时间</th></tr></thead>
+<tbody>
+<tr><td>青禾茶事（虚构）</td><td><span class="badge">note</span></td><td class="mono">2026-11-15T23:02:53+08:00</td></tr>
+<tr><td>历史爆款案例（虚构）</td><td><span class="badge">case</span></td><td class="mono">2026-11-15T23:02:53+08:00</td></tr>
+<tr><td>常见问答（虚构）</td><td><span class="badge">faq</span></td><td class="mono">2026-11-15T23:02:53+08:00</td></tr>
+<tr><td>价格与客单价（虚构）</td><td><span class="badge">product</span></td><td class="mono">2026-11-15T23:02:53+08:00</td></tr>
+<tr><td>产品信息（虚构）</td><td><span class="badge">product</span></td><td class="mono">2026-11-15T23:02:53+08:00</td></tr>
+<tr><td>品牌语气与内容规范（虚构）</td><td><span class="badge">note</span></td><td class="mono">2026-11-15T23:02:53+08:00</td></tr>
+<tr><td>目标人群与场景（虚构）</td><td><span class="badge">note</span></td><td class="mono">2026-11-15T23:02:52+08:00</td></tr>
+</tbody>
+</table>
+</section>
+</main>
+<footer class="footer">
+<span>只读本地 store · 不抓取、不登录、不自动发布 · 发布由人完成</span>
+<span>数据是本地 fixture 或你自己导入的导出文件</span>
+</footer>
+</body>
+</html>
