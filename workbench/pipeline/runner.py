@@ -175,8 +175,6 @@ def run_pipeline(
                     ended_at=now_iso(cfg.tz),
                     error=_error_text(exc),
                 )
-                if isinstance(exc, WorkbenchError):
-                    raise
                 raise PipelineFailed(pipeline, stage_name, exc) from exc
 
             repo.update_job(
