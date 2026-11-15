@@ -506,6 +506,22 @@ def test_topic_suggest_empty_source_exits_zero(
     assert payload["message"] == "信源无新内容"
 
 
+def test_topic_suggest_rejects_bad_sources_and_offline(
+    cli_env: Path, tmp_path: Path
+) -> None:
+    bad_sources = _invoke(
+        ["topic", "suggest", "--sources", "nope", "--out", str(tmp_path / "a")]
+    )
+    assert bad_sources.exit_code == 2
+    assert "未知信源" in _combined(bad_sources)
+
+    bad_offline = _invoke(
+        ["topic", "suggest", "--offline", "abc", "--out", str(tmp_path / "b")]
+    )
+    assert bad_offline.exit_code == 2
+    assert "--offline" in _combined(bad_offline)
+
+
 def test_topic_benchmark_cli_reports_samples(cli_env: Path, tmp_path: Path) -> None:
     out = tmp_path / "profile"
     result = _invoke(
