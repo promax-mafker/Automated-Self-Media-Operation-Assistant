@@ -1,5 +1,7 @@
 # 超级个体获客工作台（Automated Self-Media Operation Assistant）
 
+> 在线站点（GitHub Pages）：<https://promax-mafker.github.io/Automated-Self-Media-Operation-Assistant/> · 含控制台静态快照与样例产物
+
 一句话定位：给一个人（或 1-3 人小团队）用的**本地获客工作台**——把「选题 → 文案 → 图文/视频 →
 发布包 → 数据回灌 → 复盘」串成六条可单独调用的流水线，再加一个只读本地数据的 Web 控制台。
 
