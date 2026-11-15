@@ -38,6 +38,7 @@ class RawItem:
     published_at: str | None = None
     summary: str | None = None
     platform: str | None = None
+    heat: float | None = None
     tags: list[str] = field(default_factory=list)
 
 
@@ -49,6 +50,7 @@ class KBHit:
     chunk_id: str
     title: str
     body: str
+    heading: str | None = None
     score: float = 0.0
 
 

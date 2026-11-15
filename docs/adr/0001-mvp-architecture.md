@@ -330,6 +330,17 @@ class Publisher(Protocol):             # T08（只打包，不登录）
 
 懒加载约定：调用方用 `get_kb(cfg)` / `get_renderer()` / `get_composer()`；实现模块缺失时返回 Null 实现（`search→[]`、`add→{}`、其余抛 `Unavailable`），日志一条 warning，**不允许崩**。实现模块固定路径：`workbench.knowledge.build`、`workbench.render.build`、`workbench.video.build`、`workbench.publish.build`、`workbench.topics.sources.build_adapters`。
 
+工厂函数名固定为 `build_kb(cfg)` / `build_renderer()` / `build_composer()` / `build_publisher()` / `build_adapters(cfg)`，下游 Ticket 不得改名；要改契约由人类改这一节。
+
+数据类字段（以 `workbench/contracts.py` 为准）：
+
+| 数据类 | 字段 |
+| --- | --- |
+| `RawItem` | `source, title, url, published_at, summary, platform, heat, tags` |
+| `KBHit` | `doc_id, chunk_id, title, body, heading, score` |
+| `RenderSpec` | `kind, out, template, width, height, data` |
+| `RenderResult` | `path, width, height, bytes, meta` |
+
 ### 6.5 环境变量
 
 | 变量 | 默认 | 说明 |
